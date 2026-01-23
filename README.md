@@ -81,6 +81,16 @@ Full technical packs, diagrams, walkthroughs, and sandbox access are provided **
 
 ---
 
+## Public Documentation Index
+
+A sanitized index of the regulatory and technical documentation pack is available here:
+
+**[Documentation Pack – Public Index](docs/00-doc-index.md)**
+
+Full documentation, diagrams, and technical materials are available only under NDA for regulated institutions.
+
+---
+
 ## Access & Engagement
 
 This repository is intended for:
