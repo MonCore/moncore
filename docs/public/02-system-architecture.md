@@ -52,7 +52,7 @@ Only the kernel is authoritative.
 External providers act strictly as execution agents and never hold authority over ledger state, balances, compliance state, or reconciliation outcomes.
 
 
-### 3. Data Custody & Legal Boundary
+## 3. Data Custody & Legal Boundary
 
 MonCore does not act as:
 
