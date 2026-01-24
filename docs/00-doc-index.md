@@ -1,3 +1,23 @@
+# MonCore — Documentation Index
+
+This repository contains both public technical documentation and an index of the regulator-grade private documentation pack maintained for the MonCore Financial Operating System.
+
+---
+
+## Public Documentation
+
+The following documents are publicly available and sanitized for open distribution:
+
+- Platform Overview  
+  docs/public/01-platform-overview.md  
+
+These documents describe MonCore’s architecture principles, operating model, and regulatory positioning at a non-confidential level.
+
+All other documents listed below exist in a controlled private pack and are provided only to regulated counterparties under NDA and formal engagement.
+
+---
+
+
 # MonCore — Regulatory & Technical Documentation Pack (Public Index)
 
 This repository contains a public index of the regulator-grade documentation pack maintained for the MonCore Financial Operating System.
