@@ -1,7 +1,10 @@
 # Environment Parity — Sandbox = Production  
-← Back to Documentation Index  
+<div align="right">
+← <a href="../00-doc-index.md">Back to Documentation Index</a>
+</div>
 
----
+
+--- 
 
 ## 1. Purpose of This Document
 
