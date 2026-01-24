@@ -242,7 +242,8 @@ No environment transition is required for issuer activation.
 
 All system control and enforcement jobs execute identically in both environments:
 
-- AML continuous sweeps  
+- AML continuous sweeps
+- Identity verification and tier enforcement  
 - Velocity and exposure enforcement  
 - Geo-risk controls  
 - Card lifecycle enforcement  
