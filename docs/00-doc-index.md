@@ -9,7 +9,7 @@ This repository contains both public technical documentation and an index of the
 The following documents are publicly available and sanitized for open distribution:
 
 - **Platform Overview**  
-  [docs/public/01-platform-overview.md](01-platform-overview.md)
+  [01-platform-overview.md](01-platform-overview.md)
 
 These documents describe MonCore’s architecture principles, operating model, and regulatory positioning at a non-confidential level.
 
