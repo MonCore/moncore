@@ -18,7 +18,7 @@ Provider-agnostic execution interfaces
 The platform is designed for issuer-led deployment under EMI, PSD2, card scheme, and bank supervision, with strict separation between internal financial state and external execution providers.
 
 
-2. High-Level Architecture
+## 2. High-Level Architecture
 
 MonCore is structured as three strictly separated planes:
 
@@ -52,7 +52,7 @@ Only the kernel is authoritative.
 External providers act strictly as execution agents and never hold authority over ledger state, balances, compliance state, or reconciliation outcomes.
 
 
-3. Data Custody & Legal Boundary
+### 3. Data Custody & Legal Boundary
 
 MonCore does not act as:
 
@@ -73,10 +73,10 @@ Audit and reconciliation evidence
 MonCore acts exclusively as a regulated system-of-record and control platform and does not itself hold client funds.
 
 
-4. Core Ledger & Balance Architecture
+## 4. Core Ledger & Balance Architecture
 
 
-4.1 Canonical Ledger
+### 4.1 Canonical Ledger
 
 All monetary state is derived exclusively from the canonical ledger.
 
@@ -108,7 +108,7 @@ Deterministic replay safety
 The auxiliary ledger table exists for reporting and compatibility purposes and is not authoritative.
 
 
-4.2 Balance Snapshots
+### 4.2 Balance Snapshots
 
 Authoritative balances are always derived from the ledger.
 
@@ -124,7 +124,7 @@ Snapshots are a performance layer only.
 The ledger remains the single source of truth.
 
 
-5. Disaster Recovery & State Reconstruction
+### 5. Disaster Recovery & State Reconstruction
 
 Because all balances and exposure are derived from immutable ledger postings, MonCore supports forensic reconstruction of:
 
@@ -146,7 +146,7 @@ Regulator forensic review
 After system failure, corruption, or operator error, the complete financial state can be reconstructed deterministically from ledger history and reconciliation evidence.
 
 
-6. Multi-Tenant Isolation Model
+## 6. Multi-Tenant Isolation Model
 
 MonCore supports multiple regulated tenants operating on the same kernel.
 
@@ -164,7 +164,7 @@ All aggregation views operate strictly through tenant-scoped joins.
 All regulated execution domains remain disabled until explicitly activated by contract and jurisdiction.
 
 
-7. Deterministic Execution & Idempotency
+## 7. Deterministic Execution & Idempotency
 
 All financial requests are protected by kernel-level idempotency.
 
@@ -182,7 +182,7 @@ Safe retries
 No double debit or credit under webhook duplication or provider replay  
 
 
-8. Embedded Compliance & Risk Control
+## 8. Embedded Compliance & Risk Control
 
 Compliance is embedded directly into the kernel.
 
@@ -203,7 +203,7 @@ AML risk is assessed
 Blocked or flagged transactions are rejected in the execution pipeline before posting to the ledger.
 
 
-9. Exposure & Regulatory Counters
+## 9. Exposure & Regulatory Counters
 
 MonCore computes regulatory exposure directly from the ledger.
 
@@ -223,7 +223,7 @@ Total cards issued
 All exposure metrics are ledger-derived and provider-independent.
 
 
-10. Provider-Agnostic Execution Layer
+## 10. Provider-Agnostic Execution Layer
 
 External providers are integrated behind stable kernel interfaces.
 
@@ -250,7 +250,7 @@ Reconciliation logic
 Audit exports  
 
 
-11. Reconciliation & Settlement Control
+## 11. Reconciliation & Settlement Control
 
 MonCore implements a native settlement and reconciliation engine.
 
@@ -275,7 +275,7 @@ No missing settlement
 Cryptographically verifiable settlement lineage  
 
 
-12. Audit & Evidence Layer
+## 12. Audit & Evidence Layer
 
 All critical operations generate append-only audit records.
 
@@ -310,12 +310,12 @@ Time scopes
 Operator identity  
 
 
-13. Tenant, Partner & Admin Control Planes
+## 13. Tenant, Partner & Admin Control Planes
 
 MonCore separates three governance planes.
 
 
-13.1 Product Plane
+### 13.1 Product Plane
 
 End-user operations:
 
@@ -325,7 +325,7 @@ Cards and funding
 Authentication and sessions  
 
 
-13.2 Partner / Tenant Plane
+### 13.2 Partner / Tenant Plane
 
 Tenant operators access:
 
@@ -337,7 +337,7 @@ Partner audit trails
 All partner actions are fully audited.
 
 
-13.3 Internal Admin Plane
+### 13.3 Internal Admin Plane
 
 Internal governance is isolated through:
 
@@ -348,7 +348,7 @@ Immutable admin audit trails
 Internal admin tooling is designed for regulator-safe review and evidence export; financial state mutation is restricted to controlled operational flows.
 
 
-14. Sandbox = Production Parity
+## 14. Sandbox = Production Parity
 
 MonCore enforces full environment parity.
 
@@ -375,10 +375,10 @@ Regulator walkthroughs
 Pilot deployments without migrations  
 
 
-15. Supported Deployment Models
+## 15. Supported Deployment Models
 
 
-15.1 Kernel-Only Integration
+### 15.1 Kernel-Only Integration
 
 MonCore provides:
 
@@ -390,7 +390,7 @@ Exposure
 The partner supplies all frontend and orchestration.
 
 
-15.2 Full Stack Platform
+### 15.2 Full Stack Platform
 
 MonCore provides:
 
@@ -401,7 +401,7 @@ Realtime telemetry
 Admin and partner dashboards  
 
 
-15.3 Pilot / Pre-Issuer Mode
+### 15.3 Pilot / Pre-Issuer Mode
 
 Before issuer onboarding, MonCore may operate with:
 
@@ -413,7 +413,7 @@ Full audit and reconciliation
 Issuer-dependent settlement remains contract-gated.
 
 
-16. Threat Model & Trust Assumptions
+## 16. Threat Model & Trust Assumptions
 
 MonCore assumes all external clients, networks, and providers may:
 
@@ -433,7 +433,7 @@ Before mutating any financial state.
 No external system is trusted to mutate balances, ledger entries, or reconciliation state directly.
 
 
-17. Scalability & Throughput Model
+## 17. Scalability & Throughput Model
 
 MonCore is designed as a vertically consistent financial kernel with horizontally scalable API and execution layers.
 
@@ -450,7 +450,7 @@ Snapshot consistency
 Audit guarantees  
 
 
-18. Regulatory Alignment
+## 18. Regulatory Alignment
 
 MonCore is designed to operate under:
 
@@ -467,7 +467,7 @@ Scheme technical onboarding
 Continuous supervisory access to audit and reconciliation data  
 
 
-19. Out-of-Scope Interfaces
+## 19. Out-of-Scope Interfaces
 
 This document describes the financial kernel architecture only.
 
@@ -482,7 +482,7 @@ Product-specific workflows
 This document describes conceptual architecture and control boundaries only. Internal data models, execution flows, and security mechanisms are intentionally not disclosed.
 
 
-20. Security & Integrity Guarantees
+## 20. Security & Integrity Guarantees
 
 MonCore provides:
 
@@ -501,7 +501,7 @@ No settlement duplication
 Full forensic traceability  
 
 
-21. Conclusion
+## 21. Conclusion
 
 MonCore is a financial operating system designed to provide issuer-grade correctness, compliance, and governance for modern regulated platforms.
 
