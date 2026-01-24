@@ -456,6 +456,18 @@ This guarantees:
 - No overlapping AML sweeps  
 - No inconsistent system state under restarts or crashes
 
+### 4.5 Authentication & Session Security
+
+Authentication & Session Security
+
+MonCore includes a hardened authentication and session control layer with:
+
+Strong multi-factor authentication support  
+Deterministic session invalidation and revocation  
+Realtime session kill and account lock propagation  
+Role- and tenant-scoped access enforcement  
+
+All authentication events are audit-logged and correlated with financial activity.
 ---
 
 ## 5. Multi-Tenant & Partner Model
