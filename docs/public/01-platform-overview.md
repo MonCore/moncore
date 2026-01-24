@@ -1,5 +1,10 @@
 # MonCore Platform Overview
- 
+ <div align="right">
+← <a href="../00-doc-index.md">Back to Documentation Index</a>
+</div>
+
+---
+
 ## 1. Executive Summary
 
 MonCore is a production-grade financial operating system designed to act as the system of record for regulated digital money, card, and payment products. It provides a deterministic, ledger-first core with embedded compliance, reconciliation, idempotency, and multi-tenant isolation, enabling fintechs, issuers, and regulated partners to launch fully governed financial products in weeks rather than years.
