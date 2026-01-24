@@ -28,7 +28,6 @@ MonCore is structured as three strictly separated planes:
 │                Product Plane                 │
 │  (Wallets, Cards, QR, Transfers, Dashboards) │
 └──────────────────────────────────────────────┘
-
                      │
                      ▼
                      
@@ -43,7 +42,6 @@ MonCore is structured as three strictly separated planes:
 │  • Audit & Evidence                          │
 │  • Tenant & Capability Gating                │
 └──────────────────────────────────────────────┘
-
                      │
                      ▼
                      
