@@ -104,7 +104,34 @@ This allows:
 
 - Regulator and issuer sandbox walkthroughs on real flows  
 - Partner pilots before scheme onboarding  
-- Zero-downtime transition from pilot to regulated production  
+- Zero-downtime transition from pilot to regulated production
+
+  ### 2.8 Pre-Integrated Tier-1 Provider Ecosystem
+
+MonCore is delivered with production-grade integrations to Tier-1 execution and compliance providers.
+
+The platform already operates with:
+
+- Open-banking payment initiation and account funding providers  
+- Card-based funding and top-up processors  
+- Tier-1 KYC / KYB / UBO and AML onboarding providers  
+
+All provider integrations are:
+
+- Abstracted behind stable kernel interfaces  
+- Fully idempotent and webhook-safe  
+- Ledger-first and audit-logged  
+- Contract-gated and tenant-scoped  
+
+This allows MonCore to:
+
+- Run real pilot products before issuer onboarding  
+- Switch execution providers without re-architecting the core  
+- Operate hybrid stacks (multiple providers per domain)  
+- Transition seamlessly from pilot providers to issuer-backed production  
+
+Provider integrations remain replaceable components.  
+The ledger, compliance, reconciliation, and audit kernel remains invariant.
 
 ---
 
@@ -407,6 +434,49 @@ MonCore supports three execution planes:
 - System events and reconciliation audits  
 - Immutable admin audit logs  
 
+## 5.4 Platform Modules & Kernel Services
+
+MonCore exposes a modular financial operating system composed of governed kernel services and optional execution domains.
+
+Core kernel services include:
+
+- Canonical ledger and balance engine  
+- Multi-wallet and multi-currency engine  
+- Embedded FX conversion engine  
+- Global idempotency and correlation framework  
+- AML, velocity, tier and exposure engine  
+- Reconciliation and settlement engine  
+- Immutable audit and evidence engine  
+- System control and enforcement scheduler  
+
+Execution and product modules include:
+
+- Open-banking funding and withdrawals  
+- Card funding, authorization, capture and dispute lifecycle  
+- Internal transfers and P2P payments  
+- Merchant and QR payments  
+- Voucher and closed-loop schemes  
+- Corporate and business account flows  
+
+Governance and control modules include:
+
+- Tenant and capability management  
+- Jurisdiction and regulatory gating  
+- Partner and regulator dashboards  
+- Export and forensic tooling  
+
+All modules are:
+
+- Capability-gated per tenant and jurisdiction  
+- Fully auditable and replay-safe  
+- Deployable independently or as a full stack  
+
+This modular design allows MonCore to operate as:
+
+- A full digital banking core  
+- An embedded finance kernel  
+- A regulated payment orchestration layer  
+- A multi-tenant financial infrastructure platform
 ---
 
 ## 6. Integration Modes
@@ -434,6 +504,33 @@ MonCore can be integrated in three primary ways:
 - Card settlement only  
 
 All modes preserve audit, idempotency, and reconciliation guarantees.
+
+## 6.4 Product Build & Extensibility Model
+
+MonCore is designed as a programmable financial kernel on which regulated products and applications are built.
+
+Partners and issuers may:
+
+- Build consumer and business applications directly on MonCore APIs  
+- Embed MonCore as a regulated backend inside existing products  
+- Operate multiple products and tenants on a single kernel instance  
+
+MonCore provides:
+
+- Stable financial APIs for wallets, payments, transfers and funding  
+- Realtime event streams for UI synchronization  
+- Regulator-grade export and reporting interfaces  
+- Capability and jurisdiction controls at product level  
+
+Applications built on MonCore inherit automatically:
+
+- Ledger-first correctness  
+- Embedded compliance and AML enforcement  
+- Idempotent execution semantics  
+- Settlement and reconciliation readiness  
+- Regulator-grade auditability  
+
+This allows new regulated products to be launched without rebuilding financial infrastructure.
 
 ---
 
@@ -471,6 +568,29 @@ This enables:
 - Issuer technical validation on real flows  
 - Regulator sandbox walkthroughs  
 - Partner pilot deployments before scheme activation  
+
+### 7.2 Zero-Migration Pilot to Production Transition
+
+MonCore is designed to transition regulated products from pilot execution to issuer-backed production without data migration, product rewrites, or user disruption.
+
+During pre-issuer pilot operation:
+
+- Users, wallets, balances and ledger history are created in production-equivalent schema  
+- All flows execute through the full compliance, idempotency and audit kernel  
+- Issuer-dependent execution remains contract-gated  
+
+When an issuer sponsor is onboarded:
+
+- Issuing, safeguarding and settlement capabilities are activated by contract  
+- Execution endpoints are switched from pilot providers to issuer processors  
+- Existing users, balances and ledger state remain unchanged  
+- Audit history and compliance timelines remain continuous  
+
+This enables:
+
+- Zero-downtime transition from pilot to regulated production  
+- Regulator and issuer validation on real historical data  
+- Continuous audit lineage across the entire lifecycle
 
 ---
 
