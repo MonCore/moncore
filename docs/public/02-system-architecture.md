@@ -23,12 +23,14 @@ The platform is designed for issuer-led deployment under EMI, PSD2, card scheme,
 
 MonCore is structured as three strictly separated planes:
 
+---
 ┌──────────────────────────────────────────────┐
 │                Product Plane                 │
 │  (Wallets, Cards, QR, Transfers, Dashboards) │
 └──────────────────────────────────────────────┘
                      │
-                     ▼       
+                     ▼
+---                     
 ┌──────────────────────────────────────────────┐
 │        MonCore Kernel (Control Plane)        │
 │                                              │
@@ -41,12 +43,14 @@ MonCore is structured as three strictly separated planes:
 │  • Tenant & Capability Gating                │
 └──────────────────────────────────────────────┘
                      │
-                     ▼                    
+                     ▼      
+ ---                    
 ┌──────────────────────────────────────────────┐
 │               Execution Plane                │
 │  (Issuers, Safeguarding, Cards, Open Banking │
 │   FX, Identity, Payments)                    │
 └──────────────────────────────────────────────┘
+---
 
 Only the kernel is authoritative.
 
