@@ -58,7 +58,7 @@ The documents listed below exist in a controlled private pack and are provided o
 
 ### Authentication & Session Governance
 
-14. Authentication & Session Governance  
+14. Authentication & Sessions   
 15. Security Events & Incident Detection  
 
 ### Multi-Tenant & Governance
