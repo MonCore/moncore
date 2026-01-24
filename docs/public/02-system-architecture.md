@@ -23,37 +23,40 @@ The platform is designed for issuer-led deployment under EMI, PSD2, card scheme,
 
 MonCore is structured as three strictly separated planes:
 
-┌──────────────────────────────────────────────┐
-│                Product Plane                 │
-│  (Wallets, Cards, QR, Transfers, Dashboards) │
-└──────────────────────────────────────────────┘
-                     │
-                     ▼
-  ---                   
-┌──────────────────────────────────────────────┐
-│        MonCore Kernel (Control Plane)        │
-│                                              │
-│  • Ledger Engine & Snapshots                 │
-│  • Idempotency & Correlation                 │
-│  • Compliance & AML                          │
-│  • Exposure & Counters                       │
-│  • Reconciliation & Settlement               │
-│  • Audit & Evidence                          │
-│  • Tenant & Capability Gating                │
-└──────────────────────────────────────────────┘
-                     │
-                     ▼      
-   ---                  
-┌──────────────────────────────────────────────┐
-│               Execution Plane                │
-│  (Issuers, Safeguarding, Cards, Open Banking │
-│   FX, Identity, Payments)                    │
-└──────────────────────────────────────────────┘
----
+```text
 
-Only the kernel is authoritative.
+┌──────────────────────────────────────────────────────────────┐
+│                         Product Plane                         │
+│         (Wallets, Cards, QR, Transfers, Dashboards)          │
+└──────────────────────────────────────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                 MonCore Kernel (Control Plane)               │
+│                                                              │
+│  • Ledger Engine & Snapshots                                  │
+│  • Idempotency & Correlation                                  │
+│  • Compliance & AML                                           │
+│  • Exposure & Counters                                        │
+│  • Reconciliation & Settlement                                │
+│  • Audit & Evidence                                           │
+│  • Tenant & Capability Gating                                 │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                       Execution Plane                         │
+│     (Issuers, Safeguarding, Cards, Open Banking, FX,          │
+│                Identity, Payments)                            │
+└──────────────────────────────────────────────────────────────┘
+```
 
-External providers act strictly as execution agents and never hold authority over ledger state, balances, compliance state, or reconciliation outcomes.
+Only the kernel is authoritative over ledger state, balances,
+compliance state, and reconciliation.
+
+External providers act strictly as execution agents and never hold
+authority over financial outcomes.
 
 ---
 
