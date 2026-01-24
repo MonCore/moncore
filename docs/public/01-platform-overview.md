@@ -12,6 +12,8 @@ MonCore is not a consumer application and not a bank. It is a financial kernel t
 
 The platform is architected to operate in sandbox and production under identical code paths, controls, and audit guarantees, with only credentials and counterparties differing between environments.
 
+MonCore may be deployed as a complete regulated financial backend, providing execution, compliance, and control layers, or embedded as a financial kernel inside existing licensed infrastructures.
+
 ---
 
 ## 2. Design Principles
@@ -125,13 +127,15 @@ All provider integrations are:
 
 This allows MonCore to:
 
-- Run real pilot products before issuer onboarding  
+- Run real pilot products backed by regulated execution providers before issuer onboarding  
 - Switch execution providers without re-architecting the core  
 - Operate hybrid stacks (multiple providers per domain)  
 - Transition seamlessly from pilot providers to issuer-backed production  
 
 Provider integrations remain replaceable components.  
 The ledger, compliance, reconciliation, and audit kernel remains invariant.
+
+All client funds and regulated execution during pilot operation are held and processed exclusively by licensed execution providers.
 
 ### 2.9 Turnkey Plug-and-Play Execution Model
 
