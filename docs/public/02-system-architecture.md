@@ -1,4 +1,4 @@
-## System Architecture — MonCore Financial Operating System
+# System Architecture — MonCore Financial Operating System
 <div align="right">
 ← <a href="../00-doc-index.md">Back to Documentation Index</a>
 </div>
