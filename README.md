@@ -132,7 +132,7 @@ MonCore is designed and maintained by:
 
 **Mon Florin**  
 Founder & Financial Systems Architect  
-🇪🇺 Italy / EU  
+Italy / EU  
 
 - GitHub: https://github.com/MonFlorin  
 - LinkedIn: https://www.linkedin.com/in/your-linkedin  
