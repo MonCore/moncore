@@ -272,6 +272,17 @@ Compliance model
 Reconciliation logic  
 Audit exports  
 
+All issuer-dependent execution domains remain contract-gated and inactive until an issuer sponsor and safeguarding institution are onboarded.
+
+Before issuer onboarding:
+
+- Settlement finalization is disabled  
+- Withdrawals to bank rails are disabled  
+- Card clearing remains in pilot / shadow mode  
+- Custody and safeguarding remain external  
+
+The kernel contains full production-grade settlement and withdrawal logic, but execution endpoints remain inactive pending issuer sponsorship and scheme onboarding.
+
 ---
 
 ## 11. Reconciliation & Settlement Control
