@@ -23,7 +23,6 @@ The platform is designed for issuer-led deployment under EMI, PSD2, card scheme,
 
 MonCore is structured as three strictly separated planes:
 
----
 ┌──────────────────────────────────────────────┐
 │                Product Plane                 │
 │  (Wallets, Cards, QR, Transfers, Dashboards) │
