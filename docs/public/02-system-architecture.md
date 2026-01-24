@@ -22,7 +22,7 @@ The platform is designed for issuer-led deployment under EMI, PSD2, card scheme,
 ## 2. High-Level Architecture
 
 MonCore is structured as three strictly separated planes:
-
+--
 ┌──────────────────────────────────────────────┐
 │                Product Plane                 │
 │  (Wallets, Cards, QR, Transfers, Dashboards) │
@@ -47,7 +47,7 @@ MonCore is structured as three strictly separated planes:
 │  (Issuers, Safeguarding, Cards, Open Banking │
 │   FX, Identity, Payments)                    │
 └──────────────────────────────────────────────┘
-
+--
 Only the kernel is authoritative.
 
 External providers act strictly as execution agents and never hold authority over ledger state, balances, compliance state, or reconciliation outcomes.
