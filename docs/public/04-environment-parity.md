@@ -8,7 +8,7 @@
 
 ## 1. Purpose of This Document
 
-This document formally describes the environment parity model implemented within the MonCore Financial Operating System (“MonCore”).
+This document formally describes the environment parity model implemented within the MonCore - Financial Operating System (“MonCore”).
 
 It explains how MonCore enforces identical architecture, control paths, execution semantics, and audit guarantees across sandbox and production environments, while maintaining strict physical, logical, and legal isolation between environments.
 
