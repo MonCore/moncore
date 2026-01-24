@@ -123,3 +123,19 @@ This repository contains controlled material.
 
 **MonCore — Financial Operating System**  
 *Ledger-authoritative. Compliance-native. Issuer-led by design.*
+
+---
+
+## 👤 Maintainer & Founder
+
+MonCore is designed and maintained by:
+
+**Mon Florin**  
+Founder & Financial Systems Architect  
+🇪🇺 Italy / EU  
+
+- GitHub: https://github.com/MonFlorin  
+- LinkedIn: https://www.linkedin.com/in/your-linkedin  
+- Email: florinmon@proton.me  
+
+MonCore is developed as a long-term regulated financial infrastructure project.
