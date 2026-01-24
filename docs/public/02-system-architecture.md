@@ -248,11 +248,15 @@ External providers are integrated behind stable kernel interfaces.
 
 Execution domains include:
 
-Open-banking funding  
-Card funding  
-Card authorisation and clearing  
-Card settlement  
-Bank withdrawals  
+Open-banking funding and withdrawals  
+Card funding and authorization  
+Card clearing and settlement (issuer-gated)  
+FX execution and conversion  
+Identity verification (KYC / KYB / UBO)  
+AML and screening advisory providers  
+
+Identity and verification providers operate strictly in an advisory capacity.
+All tier changes, account activation, freezes, and compliance state transitions are adjudicated exclusively by the MonCore kernel.
 
 Each provider interaction is:
 
