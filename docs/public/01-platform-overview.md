@@ -42,7 +42,7 @@ Compliance is not an external add-on. AML evaluation, velocity controls, tier li
 Every transaction path produces:
 
 - Immutable audit records  
-- Before/after balance snapshots  
+- Before / after balance snapshots  
 - Risk scoring and AML decision traces  
 - Operational reconciliation logs  
 
@@ -51,11 +51,14 @@ Every transaction path produces:
 MonCore supports multiple regulated tenants operating on the same kernel with strict isolation:
 
 - Tenant-scoped users and wallets  
-- Capability-based service gating  
+- Capability-based service activation per tenant  
+- Jurisdiction-level gating and regulatory hard-stops  
+- Contract-gated execution domains (issuing, safeguarding, payouts, FX, open banking)  
 - Independent partner sessions and credentials  
 - Regulator-safe internal admin layer without tenant context  
 
-No tenant can observe or influence another tenant’s state.
+No tenant can observe or influence another tenant’s state.  
+All regulated capabilities remain disabled until explicitly activated by contract and jurisdiction.
 
 ### 2.5 Provider-Agnostic Execution Layer
 
@@ -75,31 +78,82 @@ Only credentials, counterparties, and settlement endpoints differ.
 
 This enables regulators, issuers, and partners to validate production behavior before go-live.
 
+### 2.7 Pre-Issuer Pilot & Shadow Mode Operation
+
+MonCore is designed to operate in a regulated “shadow mode” prior to issuer sponsorship and scheme onboarding.
+
+In this mode, MonCore can execute real pilot products using Tier-1 execution providers while issuer-dependent capabilities (card issuing, BIN sponsorship, safeguarding, settlement finalization) remain contract-gated and inactive.
+
+Current pilot-ready capabilities include:
+
+- Open-banking account funding and withdrawals (provider-signed, idempotent, webhook-driven)  
+- Card-based top-ups with dispute, reversal, and hold handling  
+- Full KYC and KYB onboarding with liveness, document capture, UBO processing, and regulator-grade audit trails  
+- Embedded AML evaluation, velocity controls, tier limits, and exposure tracking  
+- Multi-currency wallet funding and internal transfers  
+
+All pilot flows execute through the same ledger, compliance, idempotency, and audit kernel as production.
+
+When an issuer sponsor is onboarded:
+
+- Issuing, BIN, safeguarding, and settlement modules are activated by contract  
+- The same ledger state, users, balances, and audit history continue without migration  
+- No product rewrite or data transition is required  
+
+This allows:
+
+- Regulator and issuer sandbox walkthroughs on real flows  
+- Partner pilots before scheme onboarding  
+- Zero-downtime transition from pilot to regulated production  
+
 ---
 
 ## 3. Core Platform Capabilities
 
 ### 3.1 Canonical Ledger Engine
 
-The ledger is the single source of truth.
+The ledger is the single source of truth.  
+All balances are derived exclusively from immutable double-entry postings and continuously validated snapshots.
 
 Features:
 
 - Double-entry postings for every monetary movement  
 - Atomic debit / credit pairs for transfers and FX  
 - Row-level locking for double-spend protection  
-- FX-aware postings with base/quote tracking  
-- Settlement-safe idempotent debits  
-- Immutable triggers preventing deletion or tampering  
+- FX-aware postings with base / quote currency tracking and applied rate persistence  
+- Charge-level uniqueness guarantees for card and bank funding flows  
+- Immutable triggers preventing deletion or tampering of ledger rows  
+- Before / after balance materialization (`available_after`, `pending_after`) per posting  
+- Dispute holds, early holds, releases, reversals, and settlement finalization postings  
 
 Supported flows include:
 
 - Internal peer-to-peer transfers  
 - Multi-currency FX transfers  
 - Merchant payments with wallet aggregation  
-- Card authorization and settlement debits  
-- Top-ups and vouchers  
-- Issuer settlement finalization  
+- Card authorization, capture, dispute, and settlement debits  
+- Card and bank top-ups with reversal and chargeback handling  
+- Issuer settlement finalization with cryptographic lineage  
+
+### 3.1.1 Continuous Balance Snapshot & Integrity Layer
+
+In addition to immutable ledger postings, MonCore maintains continuously validated balance snapshots per user and currency.
+
+Characteristics:
+
+- Snapshot rows are derived only from ledger state  
+- One authoritative snapshot per user / currency  
+- Updated transactionally with every posting  
+- Used for real-time balance display and fast integrity checks  
+
+This enables:
+
+- Constant-time balance queries without compromising ledger authority  
+- Reconciliation between snapshot and ledger at any point in time  
+- Regulator-grade reconstruction of historical balances  
+- Detection of drift, corruption, or unauthorized mutation  
+
+Balances are never mutated directly and cannot diverge from ledger truth.
 
 ### 3.2 Multi-Wallet & Multi-Currency Engine
 
@@ -147,6 +201,30 @@ Risk enforcement is executed inline before any posting:
 - Automatic case creation and escalation hooks  
 
 Blocked or flagged transactions never reach the ledger.
+
+### 3.5.1 Rolling Regulatory Counters & Exposure Engine
+
+MonCore maintains rolling regulatory exposure counters for every user and product domain.
+
+Capabilities:
+
+- Per-product rolling windows (24h, 7d, 30d)  
+- EUR-normalized exposure tracking across currencies  
+- Velocity counts and threshold enforcement  
+- Tier-aware caps and escalation triggers  
+
+All counters are:
+
+- Written transactionally with ledger postings  
+- Replay-safe and idempotent  
+- Queryable for compliance dashboards and regulator exports  
+
+This enables:
+
+- PSD2 / EMI volume caps  
+- AML transaction aggregation  
+- Tier-based product gating  
+- Continuous exposure supervision  
 
 ### 3.6 Reconciliation & Settlement Engine
 
@@ -258,15 +336,11 @@ MonCore can be integrated in three primary ways:
 
 ### 6.1 Backend-Only (Server-to-Server)
 
-Partners integrate MonCore as a pure financial kernel:
-
 - Ledger + payments + FX + compliance  
-- Partner provides UI and client orchestration  
+- Partner provides UI and orchestration  
 - MonCore acts as system of record  
 
 ### 6.2 Full Stack (Reference Frontend + Backend)
-
-MonCore provides:
 
 - Consumer wallet APIs  
 - QR and P2P payments  
@@ -275,8 +349,6 @@ MonCore provides:
 - Admin and partner dashboards  
 
 ### 6.3 Hybrid (Embedded Kernel)
-
-Partners integrate only selected modules:
 
 - Ledger + reconciliation only  
 - Payments + AML only  
@@ -301,17 +373,29 @@ The platform already exposes:
 - AML case histories  
 - Reconciliation audit trails  
 
+### 7.1 Provider-Backed Execution Readiness
+
+Before issuer onboarding, MonCore already operates live provider-backed execution flows using production-equivalent controls.
+
+This includes:
+
+- Open-banking funding with signed requests, webhook settlement, and ledger posting  
+- Card-based funding with dispute, reversal, and hold lifecycle support  
+- Full KYC and KYB onboarding with UBO handling and tier promotion  
+- AML evaluation, velocity controls, and exposure counters  
+- Real-time balance propagation and regulator-grade audit trails  
+
+All flows execute through the same ledger, idempotency, compliance, and reconciliation kernel as issuer-backed production.
+
 This enables:
 
-- Issuer technical due diligence  
-- Regulator sandbox review  
-- Pre-production operational walkthroughs  
+- Issuer technical validation on real flows  
+- Regulator sandbox walkthroughs  
+- Partner pilot deployments before scheme activation  
 
 ---
 
 ## 8. Typical Products Powered by MonCore
-
-Without modifying the kernel, MonCore can power:
 
 - Multi-currency wallets  
 - Neobank applications  
