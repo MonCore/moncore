@@ -14,6 +14,17 @@ The platform is architected to operate in sandbox and production under identical
 
 MonCore may be deployed as a complete regulated financial backend, providing execution, compliance, and control layers, or embedded as a financial kernel inside existing licensed infrastructures.
 
+### Target Users & Deployment Profiles
+
+MonCore is designed to serve:
+
+- Fintech platform operators launching regulated consumer or business products  
+- Issuers and sponsor banks operating multi-tenant issuing and payment programs  
+- Embedded finance platforms providing regulated services to third-party applications  
+- B2B payment and corporate account providers  
+
+MonCore may be operated directly by licensed institutions or by regulated platform operators in partnership with issuer and safeguarding sponsors.
+
 ---
 
 ## 2. Design Principles
@@ -107,6 +118,8 @@ This allows:
 - Regulator and issuer sandbox walkthroughs on real flows  
 - Partner pilots before scheme onboarding  
 - Zero-downtime transition from pilot to regulated production
+
+  Pilot operation on MonCore does not require the platform operator or partner to hold an issuing or safeguarding license, as all regulated execution is performed by licensed execution providers until issuer onboarding.
 
   ### 2.8 Pre-Integrated Tier-1 Provider Ecosystem
 
@@ -515,6 +528,8 @@ This modular design allows MonCore to operate as:
 
 ## 6. Integration Modes
 
+Typical partner integrations on MonCore require weeks rather than years, as execution providers, compliance engines, reconciliation, and audit tooling are pre-integrated into the kernel.
+
 MonCore can be integrated in three primary ways:
 
 ### 6.1 Backend-Only (Server-to-Server)
@@ -601,7 +616,9 @@ The platform already exposes:
 - Ledger and settlement exports  
 - Compliance timelines  
 - AML case histories  
-- Reconciliation audit trails  
+- Reconciliation audit trails
+
+The reconciliation, settlement, and audit architecture is designed to satisfy scheme (Visa / Mastercard) technical onboarding and issuer program certification requirements.
 
 ### 7.1 Provider-Backed Execution Readiness
 
