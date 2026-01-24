@@ -17,6 +17,7 @@ Provider-agnostic execution interfaces
 
 The platform is designed for issuer-led deployment under EMI, PSD2, card scheme, and bank supervision, with strict separation between internal financial state and external execution providers.
 
+---
 
 ## 2. High-Level Architecture
 
@@ -51,6 +52,7 @@ Only the kernel is authoritative.
 
 External providers act strictly as execution agents and never hold authority over ledger state, balances, compliance state, or reconciliation outcomes.
 
+---
 
 ## 3. Data Custody & Legal Boundary
 
@@ -72,6 +74,7 @@ Audit and reconciliation evidence
 
 MonCore acts exclusively as a regulated system-of-record and control platform and does not itself hold client funds.
 
+---
 
 ## 4. Core Ledger & Balance Architecture
 
@@ -123,6 +126,7 @@ Snapshots are a performance layer only.
 
 The ledger remains the single source of truth.
 
+---
 
 ## 5. Disaster Recovery & State Reconstruction
 
@@ -145,6 +149,7 @@ Regulator forensic review
 
 After system failure, corruption, or operator error, the complete financial state can be reconstructed deterministically from ledger history and reconciliation evidence.
 
+---
 
 ## 6. Multi-Tenant Isolation Model
 
@@ -163,6 +168,7 @@ All aggregation views operate strictly through tenant-scoped joins.
 
 All regulated execution domains remain disabled until explicitly activated by contract and jurisdiction.
 
+---
 
 ## 7. Deterministic Execution & Idempotency
 
@@ -181,6 +187,7 @@ Exactly-once posting
 Safe retries  
 No double debit or credit under webhook duplication or provider replay  
 
+---
 
 ## 8. Embedded Compliance & Risk Control
 
@@ -202,6 +209,7 @@ AML risk is assessed
 
 Blocked or flagged transactions are rejected in the execution pipeline before posting to the ledger.
 
+---
 
 ## 9. Exposure & Regulatory Counters
 
@@ -222,6 +230,7 @@ Total cards issued
 
 All exposure metrics are ledger-derived and provider-independent.
 
+---
 
 ## 10. Provider-Agnostic Execution Layer
 
@@ -249,6 +258,7 @@ Compliance model
 Reconciliation logic  
 Audit exports  
 
+---
 
 ## 11. Reconciliation & Settlement Control
 
@@ -274,6 +284,7 @@ No double settlement
 No missing settlement  
 Cryptographically verifiable settlement lineage  
 
+---
 
 ## 12. Audit & Evidence Layer
 
@@ -309,6 +320,7 @@ Row counts
 Time scopes  
 Operator identity  
 
+---
 
 ## 13. Tenant, Partner & Admin Control Planes
 
@@ -347,6 +359,7 @@ Immutable admin audit trails
 
 Internal admin tooling is designed for regulator-safe review and evidence export; financial state mutation is restricted to controlled operational flows.
 
+---
 
 ## 14. Sandbox = Production Parity
 
@@ -374,6 +387,7 @@ Pre-issuer sandbox audits
 Regulator walkthroughs  
 Pilot deployments without migrations  
 
+---
 
 ## 15. Supported Deployment Models
 
@@ -412,6 +426,7 @@ Full audit and reconciliation
 
 Issuer-dependent settlement remains contract-gated.
 
+---
 
 ## 16. Threat Model & Trust Assumptions
 
@@ -432,6 +447,7 @@ Before mutating any financial state.
 
 No external system is trusted to mutate balances, ledger entries, or reconciliation state directly.
 
+---
 
 ## 17. Scalability & Throughput Model
 
@@ -449,6 +465,7 @@ Ledger integrity
 Snapshot consistency  
 Audit guarantees  
 
+---
 
 ## 18. Regulatory Alignment
 
@@ -466,6 +483,7 @@ Issuer certification
 Scheme technical onboarding  
 Continuous supervisory access to audit and reconciliation data  
 
+---
 
 ## 19. Out-of-Scope Interfaces
 
@@ -481,6 +499,7 @@ Product-specific workflows
 
 This document describes conceptual architecture and control boundaries only. Internal data models, execution flows, and security mechanisms are intentionally not disclosed.
 
+---
 
 ## 20. Security & Integrity Guarantees
 
@@ -500,6 +519,7 @@ No double debit or credit
 No settlement duplication  
 Full forensic traceability  
 
+---
 
 ## 21. Conclusion
 
