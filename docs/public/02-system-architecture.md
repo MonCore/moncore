@@ -29,7 +29,7 @@ MonCore is structured as three strictly separated planes:
 └──────────────────────────────────────────────┘
                      │
                      ▼
----                     
+                     
 ┌──────────────────────────────────────────────┐
 │        MonCore Kernel (Control Plane)        │
 │                                              │
@@ -43,13 +43,13 @@ MonCore is structured as three strictly separated planes:
 └──────────────────────────────────────────────┘
                      │
                      ▼      
- ---                    
+                     
 ┌──────────────────────────────────────────────┐
 │               Execution Plane                │
 │  (Issuers, Safeguarding, Cards, Open Banking │
 │   FX, Identity, Payments)                    │
 └──────────────────────────────────────────────┘
----
+
 
 Only the kernel is authoritative.
 
