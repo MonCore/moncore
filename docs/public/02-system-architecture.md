@@ -124,7 +124,7 @@ Snapshots are a performance layer only.
 The ledger remains the single source of truth.
 
 
-### 5. Disaster Recovery & State Reconstruction
+## 5. Disaster Recovery & State Reconstruction
 
 Because all balances and exposure are derived from immutable ledger postings, MonCore supports forensic reconstruction of:
 
