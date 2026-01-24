@@ -9,7 +9,7 @@ This repository contains both **public technical documentation** and an index of
 The following documents are publicly available and sanitized for open distribution:
 
 - **Platform Overview**  
-  [`01-platform-overview.md`](./01-platform-overview.md)
+  [`01-platform-overview.md`](.public/01-platform-overview.md)
 
 - **System Architecture — MonCore Kernel**  
   [`02-system-architecture.md`](./02-system-architecture.md)
