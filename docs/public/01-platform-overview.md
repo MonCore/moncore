@@ -180,6 +180,8 @@ This allows partners to:
 Execution providers remain abstracted and replaceable.  
 The kernel, compliance, reconciliation, and audit layers remain invariant.
 
+MonCore itself never holds client funds and never acts as custodian, issuer, or settlement institution.
+
 ---
 
 ## 3. Core Platform Capabilities
@@ -479,7 +481,9 @@ MonCore supports three execution planes:
 - Read-only global views  
 - Forensic exports  
 - System events and reconciliation audits  
-- Immutable admin audit logs  
+- Immutable admin audit logs
+
+ Regulators and issuer partners may be granted read-only access to compliance, ledger, and reconciliation views for supervised operation and audits.
 
 ## 5.4 Platform Modules & Kernel Services
 
@@ -619,6 +623,7 @@ The platform already exposes:
 - Reconciliation audit trails
 
 The reconciliation, settlement, and audit architecture is designed to satisfy scheme (Visa / Mastercard) technical onboarding and issuer program certification requirements.
+All ledger state, audit records, and compliance evidence remain under the control of the platform operator or licensed institution operating MonCore.
 
 ### 7.1 Provider-Backed Execution Readiness
 
