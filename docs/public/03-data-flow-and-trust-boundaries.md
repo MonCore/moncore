@@ -1,5 +1,5 @@
-# 03. Data Flow & Trust Boundaries  
-MonCore Financial Operating System
+# Data Flow & Trust Boundaries  
+
 <div align="right">
 ← <a href="../00-doc-index.md">Back to Documentation Index</a>
 </div>
