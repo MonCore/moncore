@@ -182,6 +182,10 @@ The kernel, compliance, reconciliation, and audit layers remain invariant.
 
 MonCore itself never holds client funds and never acts as custodian, issuer, or settlement institution.
 
+### 2.10 Jurisdiction & Regulatory Domain Governance
+
+MonCore supports jurisdiction-aware execution, tenant-scoped regulatory domains, and contract-gated activation of regulated capabilities, enabling a single kernel to operate across multiple regulatory regimes while preserving strict separation of licensing, safeguarding, and settlement responsibilities.
+
 ---
 
 ## 3. Core Platform Capabilities
@@ -363,7 +367,7 @@ Key system jobs include:
 
 **AML Continuous Risk Sweep**
 
-- Periodic AML case evaluation (every 6 hours)  
+- Periodic AML case evaluation   
 - Automatic risk decay, tier-aware enforcement, and account freezing  
 - Velocity spike detection with hard account suspension  
 - Full audit trail of sweep start, decisions, and outcomes  
@@ -456,18 +460,12 @@ This guarantees:
 - No overlapping AML sweeps  
 - No inconsistent system state under restarts or crashes
 
-### 4.5 Authentication & Session Security
+### 4.5 Authentication & Access Control
 
-Authentication & Session Security
-
-MonCore includes a hardened authentication and session control layer with:
-
-Strong multi-factor authentication support  
-Deterministic session invalidation and revocation  
-Realtime session kill and account lock propagation  
-Role- and tenant-scoped access enforcement  
+MonCore includes a hardened authentication and access control layer supporting multi-factor authentication, role-based access enforcement, and full audit logging of all authentication and authorization events, designed to satisfy issuer, scheme, and regulatory supervision requirements.  
 
 All authentication events are audit-logged and correlated with financial activity.
+
 ---
 
 ## 5. Multi-Tenant & Partner Model
