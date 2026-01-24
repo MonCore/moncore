@@ -26,7 +26,7 @@ MonCore is structured as three strictly separated planes:
 ```text
 
 ┌──────────────────────────────────────────────────────────────┐
-│                         Product Plane                         │
+│                         Product Plane                        │
 │         (Wallets, Cards, QR, Transfers, Dashboards)          │
 └──────────────────────────────────────────────────────────────┘
                                │
@@ -34,21 +34,21 @@ MonCore is structured as three strictly separated planes:
 ┌──────────────────────────────────────────────────────────────┐
 │                 MonCore Kernel (Control Plane)               │
 │                                                              │
-│  • Ledger Engine & Snapshots                                  │
-│  • Idempotency & Correlation                                  │
-│  • Compliance & AML                                           │
-│  • Exposure & Counters                                        │
-│  • Reconciliation & Settlement                                │
-│  • Audit & Evidence                                           │
-│  • Tenant & Capability Gating                                 │
+│  • Ledger Engine & Snapshots                                 │
+│  • Idempotency & Correlation                                 │
+│  • Compliance & AML                                          │
+│  • Exposure & Counters                                       │
+│  • Reconciliation & Settlement                               │
+│  • Audit & Evidence                                          │
+│  • Tenant & Capability Gating                                │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
                                │
                                ▼
 ┌──────────────────────────────────────────────────────────────┐
-│                       Execution Plane                         │
-│     (Issuers, Safeguarding, Cards, Open Banking, FX,          │
-│                Identity, Payments)                            │
+│                       Execution Plane                        │
+│     (Issuers, Safeguarding, Cards, Open Banking, FX,         │
+│                Identity, Payments)                           │
 └──────────────────────────────────────────────────────────────┘
 ```
 
