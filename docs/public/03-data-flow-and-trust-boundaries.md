@@ -380,4 +380,4 @@ MonCore implements a **regulator-grade financial kernel** with:
 
 This architecture is designed to meet the expectations of issuer sponsors, safeguarding institutions, and financial regulators for production-grade regulated deployment.
 
-**End of Document**
+
