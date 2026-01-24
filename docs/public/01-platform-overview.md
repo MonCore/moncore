@@ -135,25 +135,28 @@ Supported flows include:
 - Card and bank top-ups with reversal and chargeback handling  
 - Issuer settlement finalization with cryptographic lineage  
 
-### 3.1.1 Continuous Balance Snapshot & Integrity Layer
+### 3.1.1 Balance Snapshot & Integrity Layer
 
-In addition to immutable ledger postings, MonCore maintains continuously validated balance snapshots per user and currency.
+In addition to immutable ledger postings, MonCore maintains balance snapshot tables used as a performance and reporting layer.
+
+Snapshots are **derived exclusively from immutable ledger state** and refreshed deterministically from ledger postings using controlled refresh functions. The ledger remains the sole source of truth at all times.
 
 Characteristics:
 
-- Snapshot rows are derived only from ledger state  
-- One authoritative snapshot per user / currency  
-- Updated transactionally with every posting  
+- Snapshot rows are never authoritative and never mutated directly  
+- One snapshot row per user / currency  
+- Snapshots are refreshed from ledger state via deterministic refresh jobs  
 - Used for real-time balance display and fast integrity checks  
 
-This enables:
+Integrity guarantees:
 
-- Constant-time balance queries without compromising ledger authority  
-- Reconciliation between snapshot and ledger at any point in time  
-- Regulator-grade reconstruction of historical balances  
-- Detection of drift, corruption, or unauthorized mutation  
+- Ledger postings remain the only authoritative financial record  
+- Snapshots are continuously reconcilable against ledger history  
+- Drift detection is supported through ledger-to-snapshot comparison queries  
+- Regulator-grade reconstruction is always performed from ledger, not snapshots  
 
-Balances are never mutated directly and cannot diverge from ledger truth.
+Snapshots serve strictly as a performance cache and reconciliation surface.  
+The ledger remains the single canonical source of truth.
 
 ### 3.2 Multi-Wallet & Multi-Currency Engine
 
@@ -228,21 +231,30 @@ This enables:
 
 ### 3.6 Reconciliation & Settlement Engine
 
-MonCore runs a daily settlement reconciliation loop:
+MonCore includes a deterministic settlement reconciliation engine designed for issuer-led production deployment.
 
-- Fetches pending issuer settlements  
-- Applies hard idempotency guards  
-- Ensures ledger debits exist exactly once  
-- Finalizes settlement records  
-- Generates cryptographic payload hashes  
-- Applies system signatures for non-repudiation  
-- Writes immutable reconciliation audit events  
+The platform implements:
 
-This guarantees:
+- A scheduled daily reconciliation scheduler (armed at 03:00 UTC)  
+- Idempotent reconciliation execution with startup and interval execution  
+- System-level reconciliation audit events (job start, completion, failure)  
+- Hard idempotency guards and advisory-lock protection  
 
-- No double debits  
-- No missing settlements  
-- Cryptographically provable settlement lineage  
+The reconciliation engine is architected to:
+
+- Fetch pending issuer settlements  
+- Verify ledger debits exist exactly once  
+- Finalize settlement records  
+- Generate cryptographic payload hashes  
+- Emit immutable reconciliation audit events  
+
+In pre-issuer pilot and shadow mode operation, reconciliation execution is active and audit-logged, while issuer settlement finalization remains contract-gated and inactive.
+
+This design enables:
+
+- Regulator and issuer walkthroughs before scheme activation  
+- Zero-migration activation of settlement finalization after onboarding  
+- Deterministic transition from pilot to issuer-backed production 
 
 ### 3.7 Immutable Audit & Evidence Layer
 
@@ -258,7 +270,58 @@ Audit records support:
 - Payload hashing  
 - Provider correlation  
 - Chain-of-evidence reconstruction  
-- Regulator-grade CSV / PDF exports  
+- Regulator-grade CSV / PDF exports
+
+  ### 3.7.1 System Control & Background Enforcement Layer
+
+MonCore includes a built-in system control layer composed of deterministic, audited background jobs responsible for continuous regulatory enforcement, integrity validation, and operational hygiene.
+
+All system jobs are:
+
+- Idempotent and overlap-safe using advisory database locks  
+- Fully audit-logged into the immutable audit chain  
+- Executed under snapshot-consistent database transactions  
+- Safe for regulator and issuer inspection  
+
+Key system jobs include:
+
+**AML Continuous Risk Sweep**
+
+- Periodic AML case evaluation (every 6 hours)  
+- Automatic risk decay, tier-aware enforcement, and account freezing  
+- Velocity spike detection with hard account suspension  
+- Full audit trail of sweep start, decisions, and outcomes  
+
+**Audit Chain Integrity Validation**
+
+- Full replay and verification of the cryptographic audit hash chain  
+- Detection of chain breaks, payload tampering, or mutation  
+- Boot-time and on-demand execution with regulator-grade logging  
+
+**Geo-Risk Enforcement**
+
+- Continuous country-risk enforcement against banned jurisdictions  
+- Atomic enforcement with snapshot-isolated transactions  
+- Idempotent audit logging with cryptographic payload hashing  
+
+**Card Lifecycle Enforcement**
+
+- Automatic termination of one-time cards after use or expiry  
+- Advisory-lock protected execution  
+- Hash-chained audit logging of every terminated card  
+
+**Fraud & Velocity Counter Reset**
+
+- Periodic reset and normalization of rolling fraud counters  
+- Chain-safe audit insertion preserving non-repudiation  
+
+**Settlement Reconciliation Scheduler**
+
+- Daily reconciliation job armed at fixed UTC schedule  
+- Startup execution supported  
+- Full reconciliation lifecycle audit events  
+
+This background enforcement layer ensures MonCore remains continuously compliant, auditable, and regulator-safe even in the absence of manual operator intervention.
 
 ### 3.8 Realtime Event Propagation
 
@@ -299,7 +362,23 @@ This provides legal-grade non-repudiation of settlement outcomes.
 
 - Ledger entries cannot be deleted  
 - Duplicate tx_id and charge guards enforced  
-- Audit payload hashes enforced by uniqueness constraints  
+- Audit payload hashes enforced by uniqueness constraints
+
+### 4.4 Operational Integrity & Overlap Protection
+
+All critical system jobs and financial control processes are protected against concurrent execution and race conditions through:
+
+- Advisory database locks for single-execution guarantees  
+- Snapshot-isolated transactions for regulator-grade consistency  
+- Idempotent audit insertion with conflict-safe uniqueness constraints  
+- Deterministic restart-safe execution semantics  
+
+This guarantees:
+
+- No duplicate enforcement  
+- No double reconciliation  
+- No overlapping AML sweeps  
+- No inconsistent system state under restarts or crashes
 
 ---
 
