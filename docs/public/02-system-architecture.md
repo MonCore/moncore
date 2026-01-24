@@ -1,7 +1,7 @@
-##System Architecture — MonCore Financial Operating System
+## System Architecture — MonCore Financial Operating System
 
 
-###1. Overview
+### 1. Overview
 
 MonCore is a production-grade financial operating system designed to act as the core execution and control layer for regulated digital money, card, and payment platforms.
 
