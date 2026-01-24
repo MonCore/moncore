@@ -9,13 +9,13 @@ This repository contains both **public technical documentation** and an index of
 The following documents are publicly available and sanitized for open distribution:
 
 - **Platform Overview**  
-  [`01-platform-overview.md`](.public/01-platform-overview.md)
+  [`01-platform-overview.md`](./public/01-platform-overview.md)
 
 - **System Architecture — MonCore Kernel**  
-  [`02-system-architecture.md`](./02-system-architecture.md)
+  [`02-system-architecture.md`](./public/02-system-architecture.md)
 
 - **Data Flow & Trust Boundaries**  
-  [`03-data-flow-and-trust-boundaries.md`](./03-data-flow-and-trust-boundaries.md)
+  [`03-data-flow-and-trust-boundaries.md`](./public/03-data-flow-and-trust-boundaries.md)
 
 These documents describe MonCore’s architecture principles, operating model, and regulatory positioning at a non-confidential level.
 
