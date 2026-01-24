@@ -133,6 +133,36 @@ This allows MonCore to:
 Provider integrations remain replaceable components.  
 The ledger, compliance, reconciliation, and audit kernel remains invariant.
 
+### 2.9 Turnkey Plug-and-Play Execution Model
+
+MonCore is delivered as a turnkey financial operating system with pre-integrated execution, compliance, and control layers.
+
+Partners and tenants building products on top of MonCore do not need to independently integrate Tier-1 providers for:
+
+- Open-banking payments and account funding  
+- Card top-ups and funding processors  
+- KYC / KYB / UBO onboarding and AML screening  
+
+All execution services are already integrated into the MonCore kernel and exposed through governed platform APIs.
+
+Every financial flow executed through MonCore automatically inherits:
+
+- Embedded AML evaluation and velocity enforcement  
+- Tier limits and regulatory exposure counters  
+- Idempotent execution and replay protection  
+- Ledger posting and balance integrity  
+- Reconciliation readiness and settlement lineage  
+- Immutable audit and evidence logging  
+
+This allows partners to:
+
+- Launch regulated products without building execution or compliance stacks  
+- Operate immediately in sandbox using production-equivalent controls  
+- Transition seamlessly to issuer-backed production without reintegration  
+
+Execution providers remain abstracted and replaceable.  
+The kernel, compliance, reconciliation, and audit layers remain invariant.
+
 ---
 
 ## 3. Core Platform Capabilities
@@ -531,6 +561,26 @@ Applications built on MonCore inherit automatically:
 - Regulator-grade auditability  
 
 This allows new regulated products to be launched without rebuilding financial infrastructure.
+
+## 6.5 Deployment & Operating Model
+
+MonCore may be operated as:
+
+- A centrally hosted multi-tenant financial kernel  
+- A dedicated single-tenant regulated instance  
+- A hybrid deployment integrated into partner infrastructure  
+
+All deployment models preserve:
+
+- Full tenant isolation  
+- Identical sandbox and production code paths  
+- Regulator-grade audit and reconciliation guarantees  
+
+This allows MonCore to support:
+
+- Fintech platform operators  
+- Issuers and sponsor banks  
+- Embedded finance and B2B payment providers
 
 ---
 
