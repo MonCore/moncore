@@ -173,19 +173,19 @@ The following documents are publicly available and sanitized for open distributi
 - **[Documentation Pack – Public Index](docs/00-doc-index.md)**
 
 - **Platform Overview**  
-  [`01-platform-overview.md`](./public/01-platform-overview.md)
+  [`01-platform-overview.md`](./docs/public/01-platform-overview.md)
 
 - **System Architecture — MonCore Kernel**  
-  [`02-system-architecture.md`](./public/02-system-architecture.md)
+  [`02-system-architecture.md`](./docs/public/02-system-architecture.md)
 
 - **Data Flow & Trust Boundaries**  
   [`03-data-flow-and-trust-boundaries.md`](./docs/public/03-data-flow-and-trust-boundaries.md)
 
 - **Environment Parity — Sandbox = Production**  
-  [`04-environment-parity.md`](./public/04-environment-parity.md)
+  [`04-environment-parity.md`](./docs/public/04-environment-parity.md)
 
 - **Multi-Tenant Architecture & Isolation Controls**                              
-  [` 05-multi-tenant-and-isolation.md`](./public/05-multi-tenant-and-isolation.md) 
+  [` 05-multi-tenant-and-isolation.md`](./docs/public/05-multi-tenant-and-isolation.md) 
 
 These documents describe MonCore’s operating model and regulatory architecture at a non-confidential level.
 
