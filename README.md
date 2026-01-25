@@ -1,6 +1,6 @@
 # MonCore — Financial Operating System
 <div align="right">
-<a href="../00-doc-index.md">Go to Documentation Index →</a>
+<a href="../docs/00-doc-index.md">Go to Documentation Index →</a>
 </div>
 
 ---
