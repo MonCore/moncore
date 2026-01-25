@@ -24,7 +24,7 @@ The following documents are publicly available for open distribution:
   [`04-environment-parity.md`](./public/04-environment-parity.md)
 
 - **Multi-Tenant Architecture & Isolation Controls**                              
-  [` 05-multi-tenant-and-isolation.md`](./public/05-multi-tenant-and-isolation.md)
+  [`05-multi-tenant-and-isolation.md`](./public/05-multi-tenant-and-isolation.md)
   
 - **Provider Abstraction & Execution Framework**                      
   [`06-provider-abstraction-and-execution.md`](./public/06-provider-abstraction-and-execution.md)
