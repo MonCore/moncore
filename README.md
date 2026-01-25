@@ -5,7 +5,7 @@
 
 ---
 
-MonCore is a regulator-grade **financial operating system** architected as a ledger-first financial kernel for issuer-led banking, payments, and embedded finance.
+##MonCore is a regulator-grade **financial operating system** architected as a ledger-first financial kernel for issuer-led banking, payments, and embedded finance.
 
 Plug-and-Play Regulated Product Backend
 
@@ -15,7 +15,7 @@ Products built on MonCore do not integrate authentication, onboarding, complianc
 
 All regulated domains — identity, AML, security, payments, cards, FX, reconciliation, audit and dashboards — are pre-integrated and governed inside the MonCore kernel.
 
-Partners integrate only with MonCore APIs and can deploy regulated financial products without building execution or compliance stacks.
+Partners integrate with MonCore through governed platform APIs or tenant-scoped frontend integration, and can deploy regulated financial products without building execution, security, or compliance stacks.
 
 → See: Platform Overview – Plug-and-Play Product Backend
 
