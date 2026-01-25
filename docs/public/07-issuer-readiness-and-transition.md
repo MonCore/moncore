@@ -71,7 +71,7 @@ MonCore operates as a **financial operating system and supervisory kernel**, nev
 
 Before issuer onboarding, MonCore operates in a restricted, non-custodial execution model designed for audit-grade readiness:
 
-- Ledger, transaction lifecycle, AML, FX, reconciliation, disputes, and settlement pipelines are fully implemented  
+- Ledger, transaction lifecycle, AML, FX, reconciliation, disputes, and settlement control logic are fully implemented, with execution       endpoints contract-gated and inactive.  
 - Issuer connectors, transport adapters, and webhook processors are present but contract-gated and inactive  
 - All balances are virtual and non-custodial  
 - All issuer-dependent identifiers remain unbound  
