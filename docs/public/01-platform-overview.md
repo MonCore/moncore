@@ -17,6 +17,11 @@ MonCore is not a consumer application and not a bank. It is a financial kernel t
 
 The platform is architected to operate in sandbox and production under identical code paths, controls, and audit guarantees, with only credentials and counterparties differing between environments.
 
+This documentation is intended for:
+– Issuer sponsors and safeguarding institutions evaluating sponsorship and technical readiness
+– Regulated fintech platforms and embedded finance operators evaluating deployment of regulated products on MonCore
+– Regulators, auditors, and supervisory reviewers performing architectural and control review
+
 MonCore may be deployed as a complete regulated financial operating system, providing execution, compliance, and control layers, or embedded as a financial kernel inside existing licensed infrastructures.
 
 ### Target Users & Deployment Profiles
@@ -165,7 +170,7 @@ Partners and tenants building products on top of MonCore do not need to independ
 - Card top-ups and funding processors  
 - KYC / KYB / UBO onboarding and AML screening  
 
-All execution services are already integrated into the MonCore kernel and exposed through governed platform APIs.
+All execution services are already integrated into the MonCore kernel and exposed through governed platform.
 
 Every financial flow executed through MonCore automatically inherits:
 
@@ -209,12 +214,14 @@ MonCore delivers a full regulated operating backend, including:
 
 All regulated execution, compliance, security, reconciliation and audit domains are pre-integrated and governed inside the MonCore kernel.
 
-Partners integrate with MonCore through one of the supported integration models:
+Partners deploy products on MonCore through one of the supported operating system deployment models:
 
-– Frontend-only integration using tenant identifiers and governed API endpoints  
-– Backend API integration (server-to-server)  
-– Full-stack integration using reference frontend and backend services  
-– Hybrid embedded-kernel integration inside existing infrastructures  
+– Frontend-only product deployment using tenant identifiers and governed operating system interfaces
+– Backend product deployment (server-to-server control interfaces)
+– Full-stack product deployment using reference frontend and backend services
+– Hybrid Embedded-kernel deployment inside existing regulated infrastructures  
+
+MonCore is not an API service — it is a governed financial operating backend that exposes control interfaces for regulated product deployment.
 
 In all models, partners do not independently integrate or operate:
 
@@ -232,6 +239,9 @@ When an issuer sponsor is onboarded, execution endpoints are activated without p
 This enables true plug-and-play deployment of fully regulated financial products on a production-grade financial operating system.
 
 Partners may launch regulated products without operating any regulated execution infrastructure of their own, relying exclusively on MonCore-governed services until issuer sponsorship is activated.
+
+#### In frontend-only integration mode, partners may launch regulated products without operating any backend financial infrastructure.
+The partner application authenticates directly against MonCore tenant endpoints, while MonCore provides authentication, sessions, OTP, ledger, compliance, execution, reconciliation, and audit as a managed financial operating system.
 
 ### 2.11 Jurisdiction & Regulatory Domain Governance
 
