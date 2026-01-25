@@ -17,6 +17,9 @@ The following documents are publicly available and sanitized for open distributi
 - **Data Flow & Trust Boundaries**  
   [`03-data-flow-and-trust-boundaries.md`](./public/03-data-flow-and-trust-boundaries.md)
 
+- **Environment Parity — Sandbox = Production**  
+  [`04-environment-parity.md`](./public/04-environment-parity.md.md)
+  
 These documents describe MonCore’s architecture principles, operating model, and regulatory positioning at a non-confidential level.
 
 All other documents listed below exist in a controlled private pack and are provided only to regulated counterparties under NDA and formal engagement.
