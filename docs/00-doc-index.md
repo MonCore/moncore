@@ -28,6 +28,10 @@ The following documents are publicly available for open distribution:
   
 - **Provider Abstraction & Execution Framework**                      
   [`06-provider-abstraction-and-execution.md`](./public/06-provider-abstraction-and-execution.md)
+
+- **Issuer Readiness & Transition Architecture**             
+  [`07-issuer-readiness-and-transition.md`](./public/07-issuer-readiness-and-transition.md)
+
   
 These documents describe MonCore’s operating model, control boundaries, and regulatory positioning at a **non-confidential** level.
 
