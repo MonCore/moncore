@@ -1,4 +1,4 @@
-# 05. Multi-Tenant Architecture & Isolation Controls  
+# Multi-Tenant Architecture & Isolation Controls  
 <div align="right">
 ← <a href="../00-doc-index.md">Back to Documentation Index</a>
 </div>
