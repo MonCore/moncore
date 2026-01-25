@@ -1,4 +1,4 @@
-# Provider Abstraction & Execution Framework — MonCore Financial Operating System
+# Provider Abstraction & Execution Framework 
 <div align="right">
 ← <a href="../00-doc-index.md">Back to Documentation Index</a>
 </div>
