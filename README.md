@@ -17,8 +17,6 @@ All regulated domains — identity, AML, security, payments, cards, FX, reconcil
 
 Partners integrate with MonCore through governed platform APIs or tenant-scoped frontend integration, and can deploy regulated financial products without building execution, security, or compliance stacks.
 
-→ See: Platform Overview – Plug-and-Play Product Backend
-
 It operates as the **authoritative system of record** for balances, compliance enforcement, reconciliation, and audit evidence — while keeping issuing, safeguarding, settlement, and scheme participation **strictly issuer-gated and contract-controlled**.
 
 MonCore is designed for:
