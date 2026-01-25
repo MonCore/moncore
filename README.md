@@ -1,25 +1,76 @@
 # MonCore — Financial Operating System
 
-MonCore is a **regulator-grade financial operating system** architected as a **ledger-first financial kernel** for issuer-led banking, payments, and embedded finance.
+MonCore is a regulator-grade **financial operating system** architected as a ledger-first financial kernel for issuer-led banking, payments, and embedded finance.
 
-It operates as the **authoritative system of record** for balances, compliance enforcement, audit evidence, and risk controls — while keeping **card issuing, safeguarding, settlement, and scheme participation** strictly **issuer-gated** and contract-controlled.
+It operates as the **authoritative system of record** for balances, compliance enforcement, reconciliation, and audit evidence — while keeping issuing, safeguarding, settlement, and scheme participation **strictly issuer-gated and contract-controlled**.
 
-MonCore is designed for **Electronic Money Institutions, sponsor banks, card issuers, regulated fintech platforms, and supervisory review**.
+MonCore is designed for:
+
+- Issuer and sponsor banks  
+- Electronic Money Institutions (EMIs)  
+- Card issuers and scheme programmes  
+- Regulated fintech platforms  
+- Supervisory and audit review  
+
+MonCore is not a consumer product and not a bank.  
+It is a **financial kernel and operating framework** for building and supervising regulated financial systems.
 
 ---
 
-## Core Architecture Principles
+## Architectural Positioning
 
-MonCore is built around non-negotiable regulatory and architectural guarantees:
+MonCore implements a strict separation between:
 
-- **Ledger-first kernel** — immutable event ledger, derived balances only  
-- **System of record authority** — no provider may mutate balances or ledger state  
-- **Compliance-native** — AML / CTF, velocity controls, freeze enforcement, audit-first  
-- **Issuer-gated execution** — issuing, custody, safeguarding and settlement inactive until onboarding  
-- **Multi-tenant by design** — regulator-safe tenant isolation and governance  
-- **Sandbox = production** — identical code, controls, jobs and audit paths  
+- **Ledger authority and balance integrity**  
+- **Compliance and risk enforcement**  
+- **External execution, custody, and settlement providers**  
 
-There are **no sandbox shortcuts**, no reduced controls, and no environment-specific logic.
+The kernel remains the single authority for all regulated state.
+
+External providers act strictly as execution agents and never mutate balances, ledger state, exposure counters, or reconciliation records.
+
+All issuer-dependent capabilities remain **inactive until formal onboarding and contract activation**.
+
+---
+
+## Core Design Principles
+
+MonCore is built around non-negotiable regulatory and architectural guarantees.
+
+### Ledger-First Kernel  
+All monetary state is derived exclusively from an immutable double-entry ledger.  
+Balances are never authoritative and are always computed from ledger history or validated snapshots.
+
+### System-of-Record Authority  
+No execution provider, processor, or partner may mutate balances, ledger state, or compliance state.  
+All regulated mutations are adjudicated exclusively by the MonCore kernel.
+
+### Compliance-Native Architecture  
+AML / CTF evaluation, velocity enforcement, tier limits, freezing, reconciliation audits, and export evidence are executed inline with financial posting.
+
+Compliance is not an external system — it is embedded inside the kernel.
+
+### Issuer-Gated Execution  
+Issuing, BIN sponsorship, safeguarding, withdrawals, and settlement finalization remain **contract-gated and inactive** until issuer onboarding is completed.
+
+### Multi-Tenant by Design  
+Multiple regulated programmes may operate on a single kernel with:
+
+- Strict tenant isolation  
+- Jurisdiction gating  
+- Capability-based activation  
+- Independent partner governance  
+
+### Sandbox = Production  
+The same code, schema, controls, background jobs, reconciliation logic, and audit paths run in both sandbox and production.
+
+There are:
+
+- No sandbox shortcuts  
+- No reduced controls  
+- No environment-specific logic  
+
+Only credentials and counterparties differ.
 
 ---
 
@@ -30,64 +81,104 @@ There are **no sandbox shortcuts**, no reduced controls, and no environment-spec
 - A **compliance-native core** for issuer-led banking and embedded finance  
 - A **regulator-reviewable system** with full forensic and audit integrity  
 
----
-
 ## What MonCore Is Not
 
 - Not a neobank application  
 - Not a payments API wrapper  
 - Not a UI-first core banking product  
 - Not a sandbox prototype  
-- Not a custody or execution provider  
+- Not a custody, issuing, or settlement provider  
 
-MonCore does **not** hold funds, issue cards, or perform settlement without an onboarded issuer.
+MonCore does not hold client funds, issue cards, or perform settlement without an onboarded issuer sponsor.
 
 ---
 
-## Regulatory Positioning
+## Regulatory & Issuer Readiness
 
 MonCore is architected to satisfy and exceed expectations for:
 
-- EMI and sponsor bank technical due diligence  
+- EMI and sponsor-bank technical due diligence  
 - Issuer and scheme onboarding review  
 - Safeguarding separation and non-delegation  
 - Audit logging and forensic reconstruction  
 - Supplier risk and operational resilience  
-- Sandbox equivalence for supervisory testing  
+- Supervisory sandbox validation  
 
 All critical subsystems enforce:
 
 - Immutable ledger and audit chains  
-- Deterministic execution  
-- Idempotent provider handling  
+- Deterministic execution and idempotency  
 - Fail-closed financial behavior  
 - Cryptographic evidence integrity  
+- Daily reconciliation readiness  
+
+---
+
+## Pre-Issuer Pilot & Shadow Mode Operation
+
+MonCore is designed to operate in a regulated **pre-issuer pilot / shadow mode**.
+
+In this mode:
+
+- Execution is performed by licensed Tier-1 providers  
+- Issuer-dependent domains remain contract-gated  
+- The full ledger, compliance, idempotency, and audit kernel is active  
+
+Current pilot-ready capabilities include:
+
+- Open-banking funding and withdrawals  
+- Card-based top-ups and funding flows  
+- Full KYC / KYB / UBO onboarding  
+- Embedded AML and velocity enforcement  
+- Multi-currency wallets and internal transfers  
+- Regulator-grade audit and reconciliation trails  
+
+When an issuer sponsor is onboarded:
+
+- Issuing, safeguarding, and settlement are activated by contract  
+- Existing users, balances, and ledger state continue unchanged  
+- No migration, rewrite, or downtime is required  
+
+This enables **zero-migration transition from pilot to regulated production**.
 
 ---
 
 ## Repository Scope
 
-This public repository intentionally contains **documentation only**.
+This public repository contains **documentation only**.
 
-No production code, secrets, schemas, or live configuration are published.
+It intentionally does NOT contain:
 
-Contents include:
+- Production code  
+- Database schemas  
+- Configuration files  
+- Secrets or credentials  
+- Execution workflows  
 
-- `/docs` — sanitized regulatory and architecture documentation  
-- `/assets` — redacted diagrams and interface samples  
-- `/legal` — disclosure, NDA and access policy  
+Published materials include:
 
-Full technical packs, diagrams, walkthroughs, and sandbox access are provided **only under regulated engagement**.
+- Sanitized architecture documentation  
+- Regulatory positioning documents  
+- Trust boundary and isolation models  
+- Environment parity statements  
+
+All sensitive technical materials, diagrams, walkthroughs, and sandbox access are provided **only under NDA** to regulated institutions.
 
 ---
 
 ## Public Documentation Index
 
-A sanitized index of the regulatory and technical documentation pack is available here:
+The following documents are publicly available and sanitized for open distribution:
 
-**[Documentation Pack – Public Index](docs/00-doc-index.md)**
+- Platform Overview — `01-platform-overview.md`  
+- System Architecture — MonCore Kernel — `02-system-architecture.md`  
+- Data Flow & Trust Boundaries — `03-data-flow-and-trust-boundaries.md`  
+- Environment Parity — Sandbox = Production — `04-environment-parity.md`  
+- Multi-Tenant Architecture & Isolation Controls — `05-multi-tenant-and-isolation.md`  
 
-Full documentation, diagrams, and technical materials are available only under NDA for regulated institutions.
+These documents describe MonCore’s operating model and regulatory architecture at a non-confidential level.
+
+A full regulator-grade documentation pack is maintained privately and provided only under formal engagement.
 
 ---
 
@@ -97,23 +188,28 @@ This repository is intended for:
 
 - Issuer banks and safeguarding institutions  
 - Electronic Money Institutions (EMIs)  
-- Card issuers and scheme partners  
+- BIN sponsors and card issuers  
 - Regulated fintech platforms  
-- Supervisory and audit review  
+- Supervisory and audit bodies  
 
-To request technical access, documentation packs, or sandbox walkthroughs, contact:
+For technical access, documentation packs, or sandbox walkthroughs:
 
-- **General & institutional:** contact@moncore.eu  
-- **Partnerships & issuer onboarding:** partnership@moncore.eu  
-- **Compliance & regulatory:** compliance@moncore.eu  
+- General & institutional: **contact@moncore.eu**  
+- Partnerships & issuer onboarding: **partnerships@moncore.eu**  
+- Compliance & regulatory: **compliance@moncore.eu**  
 
-Please include: institution, role, jurisdiction, and evaluation scope.
+Please include:
+
+- Institution  
+- Role  
+- Jurisdiction  
+- Evaluation scope  
 
 ---
 
 ## Disclosure & Security
 
-This repository contains controlled material.
+This repository contains controlled architectural material.
 
 - No confidential information may be redistributed without written authorization  
 - Security issues must be reported privately via the compliance channel  
@@ -121,21 +217,20 @@ This repository contains controlled material.
 
 ---
 
-**MonCore — Financial Operating System**  
-*Ledger-authoritative. Compliance-native. Issuer-led by design.*
-
----
-
-## 👤 Maintainer & Founder
+## Maintainer & Founder
 
 MonCore is designed and maintained by:
 
 **Mon Florin**  
 Founder & Financial Systems Architect  
-Italy / EU  
+Italy / European Union  
 
-- GitHub: https://github.com/MonFlorin  
-- LinkedIn: https://www.linkedin.com/in/your-linkedin  
-- Email: florinmon@proton.me  
+GitHub: https://github.com/MonFlorin  
+Email: florinmon@proton.me  
 
 MonCore is developed as a long-term regulated financial infrastructure project.
+
+---
+
+**MonCore — Financial Operating System**  
+Ledger-authoritative. Compliance-native. Issuer-led by design.ncial infrastructure project.
