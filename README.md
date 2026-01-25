@@ -205,6 +205,9 @@ The following documents are publicly available and sanitized for open distributi
 - **Provider Abstraction & Execution Framework**                      
   [`06-provider-abstraction-and-execution.md`](./docs/public/06-provider-abstraction-and-execution.md)
 
+- **Issuer Readiness & Transition Architecture**             
+  [`07-issuer-readiness-and-transition.md`](./docs/public/07-issuer-readiness-and-transition.md)
+
 These documents describe MonCore’s operating model and regulatory architecture at a non-confidential level.
 
 A full regulator-grade documentation pack is maintained privately and provided only under formal engagement.
