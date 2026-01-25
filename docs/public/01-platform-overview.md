@@ -187,7 +187,7 @@ The kernel, compliance, reconciliation, and audit layers remain invariant.
 
 MonCore itself never holds client funds and never acts as custodian, issuer, or settlement institution.
 
-## 2.10 Plug-and-Play Product Backend
+### 2.10 Plug-and-Play Product Backend
 
 MonCore provides a complete plug-and-play regulated product backend.
 
