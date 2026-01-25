@@ -103,7 +103,7 @@ Full documentation packs, diagrams, walkthroughs, and sandbox access are provide
 Requests for access:
 
 - General & institutional: **contact@moncore.eu**  
-- Partnerships & issuer onboarding: **partnership@moncore.eu**  
+- Partnerships & issuer onboarding: **partnerships@moncore.eu**  
 - Compliance & regulatory: **compliance@moncore.eu**  
 
 Please include institution, role, jurisdiction, and evaluation scope.
