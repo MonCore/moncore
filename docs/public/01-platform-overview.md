@@ -17,7 +17,7 @@ MonCore is not a consumer application and not a bank. It is a financial kernel t
 
 The platform is architected to operate in sandbox and production under identical code paths, controls, and audit guarantees, with only credentials and counterparties differing between environments.
 
-MonCore may be deployed as a complete regulated financial backend, providing execution, compliance, and control layers, or embedded as a financial kernel inside existing licensed infrastructures.
+MonCore may be deployed as a complete regulated financial operating system, providing execution, compliance, and control layers, or embedded as a financial kernel inside existing licensed infrastructures.
 
 ### Target Users & Deployment Profiles
 
@@ -187,9 +187,9 @@ The kernel, compliance, reconciliation, and audit layers remain invariant.
 
 MonCore itself never holds client funds and never acts as custodian, issuer, or settlement institution.
 
-### 2.10 Plug-and-Play Product Backend
+### 2.10 Plug-and-Play Financial Operating System (Product Backend Model)
 
-MonCore provides a complete plug-and-play regulated product backend.
+MonCore is a Financial Operating System providing a complete plug-and-play regulated product backend.
 
 Products built on MonCore do not integrate execution providers, compliance systems, security infrastructure, authentication layers, or settlement tooling directly.
 
