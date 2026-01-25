@@ -179,7 +179,7 @@ The following documents are publicly available and sanitized for open distributi
   [`02-system-architecture.md`](./public/02-system-architecture.md)
 
 - **Data Flow & Trust Boundaries**  
-  [`03-data-flow-and-trust-boundaries.md`](./public/03-data-flow-and-trust-boundaries.md)
+  [`03-data-flow-and-trust-boundaries.md`](./docs/public/03-data-flow-and-trust-boundaries.md)
 
 - **Environment Parity — Sandbox = Production**  
   [`04-environment-parity.md`](./public/04-environment-parity.md)
