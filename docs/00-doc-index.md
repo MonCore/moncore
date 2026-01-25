@@ -19,6 +19,9 @@ The following documents are publicly available and sanitized for open distributi
 
 - **Environment Parity — Sandbox = Production**  
   [`04-environment-parity.md`](./public/04-environment-parity.md)
+
+- **Multi-Tenant Architecture & Isolation Controls**
+  [` 05-multi-tenant-and-isolation.md`](./public/05-multi-tenant-and-isolation.md)
   
 These documents describe MonCore’s architecture principles, operating model, and regulatory positioning at a non-confidential level.
 
