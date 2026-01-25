@@ -1,7 +1,9 @@
-# 07 — Issuer Readiness & Zero-Migration Transition Architecture
-
-**MonCore Financial Operating System**  
-Public Architecture & Issuer Onboarding Document  
+# 07 — Issuer Readiness & Transition Architecture
+<div align="right">
+← <a href="../00-doc-index.md">Back to Documentation Index</a>
+</div>
+ 
+## Public Architecture & Issuer Onboarding Document  
 
 ---
 
