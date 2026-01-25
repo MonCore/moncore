@@ -210,7 +210,7 @@ Each export records:
 - Export scope and export type  
 - Row counts  
 - Cryptographic file hash (SHA-256)  
-- Timestamp, IP address, and environment  
+- Timestamp and execution environment  
 
 This guarantees:
 
@@ -220,7 +220,7 @@ This guarantees:
 
 ## 8. Tenant Financial Exposure and Safeguarding Reporting
 
-MonCore computes tenant exposure using deterministic, ledger-only SQL views.
+MonCore computes tenant exposure using deterministic, ledger-only deterministic database views
 
 ### 8.1 Ledger-Only Exposure Model
 
