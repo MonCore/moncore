@@ -1,4 +1,9 @@
 # MonCore — Financial Operating System
+<div align="right">
+<a href="../00-doc-index.md">Go to Documentation Index →</a>
+</div>
+
+---
 
 MonCore is a regulator-grade **financial operating system** architected as a ledger-first financial kernel for issuer-led banking, payments, and embedded finance.
 
