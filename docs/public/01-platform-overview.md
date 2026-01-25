@@ -231,6 +231,8 @@ When an issuer sponsor is onboarded, execution endpoints are activated without p
 
 This enables true plug-and-play deployment of fully regulated financial products on a production-grade financial operating system.
 
+Partners may launch regulated products without operating any regulated execution infrastructure of their own, relying exclusively on MonCore-governed services until issuer sponsorship is activated.
+
 ### 2.11 Jurisdiction & Regulatory Domain Governance
 
 MonCore supports jurisdiction-aware execution, tenant-scoped regulatory domains, and contract-gated activation of regulated capabilities, enabling a single kernel to operate across multiple regulatory regimes while preserving strict separation of licensing, safeguarding, and settlement responsibilities.
