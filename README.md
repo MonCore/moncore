@@ -244,4 +244,4 @@ MonCore is developed as a long-term regulated financial infrastructure project.
 ---
 
 **MonCore — Financial Operating System**  
-Ledger-authoritative. Compliance-native. Issuer-led by design.ncial infrastructure project.
+Ledger-authoritative. Compliance-native. Issuer-led by design. infrastructure project.
