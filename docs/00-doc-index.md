@@ -1,12 +1,15 @@
 # MonCore — Documentation Index
 
-This repository contains both **public technical documentation** and an index of the **regulator-grade private documentation pack** maintained for the MonCore Financial Operating System.
+This repository contains sanitized public documentation and a public index of the regulator-grade private documentation pack maintained for the 
+**MonCore - Financial Operating System.**
+
+Its purpose is to provide issuer sponsors, EMIs, sponsor banks, regulated partners, technical evaluators, and supervisory reviewers with a transparent view of MonCore’s architecture principles, operating model, and regulatory readiness — without disclosing confidential implementation details or proprietary controls.
 
 ---
 
-## Public Documentation
+## Public Documentation (Sanitized)
 
-The following documents are publicly available and sanitized for open distribution:
+The following documents are publicly available for open distribution:
 
 - **Platform Overview**  
   [`01-platform-overview.md`](./public/01-platform-overview.md)
@@ -21,76 +24,79 @@ The following documents are publicly available and sanitized for open distributi
   [`04-environment-parity.md`](./public/04-environment-parity.md)
 
 - **Multi-Tenant Architecture & Isolation Controls**                              
-  [` 05-multi-tenant-and-isolation.md`](./public/05-multi-tenant-and-isolation.md)
-  
-These documents describe MonCore’s architecture principles, operating model, and regulatory positioning at a non-confidential level.
+  [` 05-multi-tenant-and-isolation.md`](./public/05-multi-tenant-and-isolation.md)  
 
-All other documents listed below exist in a controlled private pack and are provided only to regulated counterparties under NDA and formal engagement.
+These documents describe MonCore’s operating model, control boundaries, and regulatory positioning at a **non-confidential** level.
 
 ---
 
-## MonCore — Regulatory & Technical Documentation Pack (Public Index)
+## Private Documentation Pack (Public Index Only)
 
-This repository contains a public index of the regulator-grade documentation pack maintained for the MonCore Financial Operating System.
+All documents listed below exist in a controlled private pack and are provided **only** to regulated counterparties under NDA and formal engagement.
 
-The full documentation set is prepared for issuer onboarding, EMI due-diligence, sponsor bank review, scheme participation, safeguarding assessment, and supervisory inspection.
+The full documentation set is prepared for:
 
-The documents listed below exist in a controlled private pack and are provided only to regulated counterparties under NDA and formal engagement.
+- Issuer onboarding and technical certification  
+- EMI and sponsor-bank due diligence  
+- Scheme participation and programme governance  
+- Safeguarding review and separation controls  
+- Supervisory inspection and audit review  
 
-### Core System & Architecture (Foundation)
+### 1) Core System & Architecture (Foundation)
+- System Architecture — MonCore Kernel  
+- Data Flow & Trust Boundaries  
+- Environment Parity Statement (Sandbox = Production)  
+- Ledger Architecture & Balance Integrity  
 
-01. System Architecture — MonCore Kernel  
-02. Data Flow & Trust Boundaries  
-03. Environment Parity Statement (Sandbox = Production)  
-04. Ledger Architecture & Balance Integrity  
+### 2) Financial & Safeguarding Framework
+- Safeguarding of Client Funds  
+- Settlement & Reconciliation Framework  
 
-### Financial & Safeguarding Framework
+### 3) Compliance & Risk Control
+- AML / CTF Policy  
+- Transaction Monitoring Framework  
+- Account Controls & Freeze Enforcement  
+- Audit Logging & Evidence Integrity  
+- Idempotency & Financial Safety Controls  
 
-05. Safeguarding of Client Funds  
-06. Settlement & Reconciliation Framework  
+### 4) Operations & Platform Reliability
+- Operational Monitoring & Telemetry  
+- Background Jobs & Deterministic Processing  
+- Security Events & Incident Detection  
 
-### Compliance & Risk Control
+### 5) Authentication & Session Governance
+- Authentication & Sessions  
 
-07. AML / CTF Policy  
-08. Transaction Monitoring Framework  
-09. Account Controls & Freeze Enforcement  
-10. Audit Logging & Evidence Integrity  
-11. Idempotency & Financial Safety Controls  
+### 6) Multi-Tenant & Governance
+- Tenant & Multi-Entity Architecture  
+- Admin & Compliance Tools  
 
-### Operations & Platform Reliability
+### 7) Third-Party & Supplier Risk
+- Third-Party Providers & Responsibilities  
+- Supplier Risk & Dependency Management  
 
-12. Operational Monitoring & Telemetry  
-13. Background Jobs & Deterministic Processing  
+### 8) Readiness & Regulatory Operations
+- Sandbox Readiness Statement  
+- Production Readiness Roadmap  
+- Incident Response & Regulatory Notification Policy  
+- Business Continuity & Disaster Recovery Policy  
+- Data Protection & Privacy Governance Policy  
 
-### Authentication & Session Governance
+---
 
-14. Authentication & Sessions   
-15. Security Events & Incident Detection  
+## Repository Scope & Disclosure
 
-### Multi-Tenant & Governance
+This public repository contains **documentation only**.
 
-16. Tenant & Multi-Entity Architecture  
-17. Admin & Compliance Tools  
+It does not include:
+- production code, schemas, secrets, configuration, or live execution workflows  
+- confidential provider integrations, operational procedures, or security mechanisms  
 
-### Third-Party & Supplier Risk
-
-18. Third-Party Providers & Responsibilities  
-19. Supplier Risk & Dependency Management  
-
-### Readiness & Regulatory Operations
-
-20. Sandbox Readiness Statement  
-21. Production Readiness Roadmap  
-22. Incident Response & Regulatory Notification Policy  
-23. Business Continuity & Disaster Recovery Policy  
-24. Data Protection & Privacy Governance Policy  
+Sandbox and production are **behaviorally equivalent** (same code and controls), but **physically isolated and do not share data**.
 
 ---
 
 ## Access & Engagement
-
-This public repository contains index information only.  
-No confidential architecture, flows, schemas, controls, or operational procedures are published.
 
 Full documentation packs, diagrams, walkthroughs, and sandbox access are provided exclusively to:
 
@@ -106,7 +112,7 @@ Requests for access:
 - Partnerships & issuer onboarding: **partnerships@moncore.eu**  
 - Compliance & regulatory: **compliance@moncore.eu**  
 
-Please include institution, role, jurisdiction, and evaluation scope.
+Please include: **institution, role, jurisdiction, and evaluation scope**.
 
 ---
 
