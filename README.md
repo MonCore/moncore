@@ -7,7 +7,7 @@
 
 ## MonCore is a regulator-grade **financial operating system** architected as a ledger-first financial kernel for issuer-led banking, payments, and embedded finance.
 
-Plug-and-Play Regulated Product Backend
+### Plug-and-Play Regulated Product Backend
 
 MonCore provides a full plug-and-play regulated product backend.
 
