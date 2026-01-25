@@ -176,10 +176,8 @@ The MonCore kernel remains the:
 - Reconciliation authority  
 - Audit evidence generator  
 
-Partners receive only:
-
-- Tenant credentials / API keys  
-- Base API endpoint (sandbox or production)  
+#### Partners are provisioned with a tenant environment and governed access credentials to the MonCore Financial Operating System.  
+#### Access may be provided through frontend-only integration, backend integration, or embedded-kernel deployment models.
 
 All regulated execution, compliance, and control remain centralized inside MonCore.
 
