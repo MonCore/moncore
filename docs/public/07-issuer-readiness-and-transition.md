@@ -1,4 +1,4 @@
-# Issuer Readiness & Transition Architecture
+# Issuer Readiness & Transition 
 <div align="right">
 ← <a href="../00-doc-index.md">Back to Documentation Index</a>
 </div>
