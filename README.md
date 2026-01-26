@@ -141,7 +141,7 @@ In this mode:
 
 Current pilot-ready capabilities include:
 
-- Open-banking funding   
+- Open-banking funding flows  
 - Card-based top-ups and funding flows  
 - Full KYC / KYB / UBO onboarding  
 - Embedded AML and velocity enforcement  
