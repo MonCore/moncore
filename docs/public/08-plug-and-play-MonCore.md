@@ -1,5 +1,5 @@
 # Plug-and-Play on MonCore  
-**MonCore Financial Operating System**  
+  
 Public Product & Deployment Model Document  
 
 ---
