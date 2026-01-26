@@ -365,7 +365,7 @@ This runtime ensures all deployed products remain audit-ready from day one.
 
 ---
 
-## 2.3 Multi-Tenant Operating Model
+### 2.3 Multi-Tenant Operating Model
 
 MonCore executes all products in a strictly isolated multi-tenant operating model:
 
@@ -384,7 +384,7 @@ This enables:
 
 ---
 
-## 2.4 Product Deployment Model
+### 2.4 Product Deployment Model
 
 Products are not integrated as backends.
 
@@ -406,7 +406,7 @@ MonCore functions as the operating backend for all deployed products.
 
 ---
 
-## 2.5 Summary
+### 2.5 Summary
 
 MonCore is not an API service and not a backend framework.
 
@@ -432,7 +432,7 @@ This runtime establishes the financial identity boundary used across all wallets
 
 ---
 
-## 3.1 Core Capabilities
+### 3.1 Core Capabilities
 
 The Identity & Security Runtime provides:
 
@@ -450,7 +450,7 @@ No product operates its own authentication, session or security stack.
 
 ---
 
-## 3.2 Authentication & Credential Management
+### 3.2 Authentication & Credential Management
 
 MonCore provides a multi-channel authentication engine supporting:
 
@@ -474,7 +474,7 @@ All credentials and tokens are validated and enforced inside the operating syste
 
 ---
 
-## 3.3 Session Supervision & Security Enforcement
+### 3.3 Session Supervision & Security Enforcement
 
 MonCore operates a full session supervision layer providing:
 
@@ -493,7 +493,7 @@ Session control is enforced centrally and inherited by all deployed products.
 
 ---
 
-## 3.4 Trusted Device & Access Control
+### 3.4 Trusted Device & Access Control
 
 MonCore embeds a native trusted-device enforcement runtime used across all authentication and high-risk flows.
 
@@ -510,7 +510,7 @@ No product implements its own device security logic.
 
 ---
 
-## 3.5 Jurisdiction & Regulatory Admission Control
+### 3.5 Jurisdiction & Regulatory Admission Control
 
 MonCore enforces jurisdiction and regulatory eligibility at identity admission time.
 
@@ -531,7 +531,7 @@ Identity creation is regulator-aware from the first interaction.
 
 ---
 
-## 3.6 Abuse Prevention & Operational Security
+### 3.6 Abuse Prevention & Operational Security
 
 MonCore embeds a built-in abuse prevention and operational security engine providing:
 
@@ -545,7 +545,7 @@ All deployed products inherit these protections without configuration.
 
 ---
 
-## 3.7 Security Telemetry & Supervisory Audit
+### 3.7 Security Telemetry & Supervisory Audit
 
 All identity and security events are captured centrally by the kernel, providing:
 
@@ -565,7 +565,7 @@ This enables continuous supervisory oversight and regulator-verifiable security 
 
 ---
 
-## 3.8 Product Inheritance Model
+### 3.8 Product Inheritance Model
 
 All products deployed on MonCore automatically inherit:
 
@@ -587,7 +587,7 @@ MonCore functions as the permanent **Identity & Security Operating Runtime** for
 
 ---
 
-## Summary
+### Summary
 
 The Identity & Security Runtime establishes MonCore as:
 
@@ -612,7 +612,7 @@ No product implements its own account model, wallet engine, entitlement system o
 
 ---
 
-## 4.1 Core Capabilities
+### 4.1 Core Capabilities
 
 The Account & Wallet Runtime provides:
 
@@ -627,7 +627,7 @@ This runtime functions as the **authoritative financial account layer** for all 
 
 ---
 
-## 4.2 Financial Account Model
+### 4.2 Financial Account Model
 
 Each identity admitted into MonCore is bound to a regulated financial account that represents:
 
@@ -646,7 +646,7 @@ Account state is centrally governed and inherited by all deployed products.
 
 ---
 
-## 4.3 Multi-Currency Wallet Runtime
+### 4.3 Multi-Currency Wallet Runtime
 
 MonCore operates a native multi-currency wallet container runtime.
 
@@ -667,7 +667,7 @@ Products do not maintain wallet schemas, currency logic or balance engines.
 
 ---
 
-## 4.4 Wallet Activation & Regulated Account Provisioning
+### 4.4 Wallet Activation & Regulated Account Provisioning
 
 MonCore embeds a regulated wallet activation and account provisioning pipeline.
 
@@ -684,7 +684,7 @@ Products do not orchestrate regulated account provisioning themselves.
 
 ---
 
-## 4.5 Tier & Entitlement Runtime
+### 4.5 Tier & Entitlement Runtime
 
 MonCore operates a built-in tier and entitlement engine governing product eligibility and regulatory access.
 
@@ -708,7 +708,7 @@ No product manages its own entitlement logic.
 
 ---
 
-## 4.6 Regulatory Account State & Control Model
+### 4.6 Regulatory Account State & Control Model
 
 MonCore operates a full regulatory account state model.
 
@@ -736,7 +736,7 @@ This establishes MonCore as the single enforcement authority for account-level r
 
 ---
 
-## 4.7 Supervisory Controls & Administrative Actions
+### 4.7 Supervisory Controls & Administrative Actions
 
 MonCore embeds native supervisory control capabilities governing all regulatory, identity and administrative account actions.
 
@@ -752,7 +752,7 @@ Tenant and partner requests are evaluated and executed exclusively by the MonCor
 
 This enables MonCore to function not only as a transaction engine, but as a regulated **supervisory control system**, while preserving issuer, safeguarding and regulatory authority boundaries.
 
-## 4.8 Account Termination & Closure Runtime
+### 4.8 Account Termination & Closure Runtime
 
 MonCore operates a regulated account termination and closure pipeline.
 
@@ -770,7 +770,7 @@ Account termination is centrally governed, audited and regulator-compliant.
 
 ---
 
-## 4.9 Product Inheritance Model
+### 4.9 Product Inheritance Model
 
 All products deployed on MonCore automatically inherit:
 
@@ -793,7 +793,7 @@ MonCore functions as the permanent **Account & Wallet Operating Runtime** for al
 
 ---
 
-## Summary
+### Summary
 
 The Account & Wallet Runtime establishes MonCore as:
 
@@ -806,7 +806,7 @@ Account and wallet management are not product features.
 
 They are permanent operating system capabilities.
 
-## 5. Payments, Transfers & Value Movement Runtime
+### 5. Payments, Transfers & Value Movement Runtime
 
 MonCore embeds a permanently running **Payments & Value Movement Runtime** inside the Financial Operating System.
 
@@ -818,7 +818,7 @@ No product implements its own payment engine, settlement logic, FX routing or tr
 
 ---
 
-## 5.1 Core Capabilities
+### 5.1 Core Capabilities
 
 The Payments Runtime provides:
 
@@ -836,7 +836,7 @@ This runtime functions as the **monetary execution kernel** of MonCore.
 
 ---
 
-## 5.2 Internal Transfers & Peer-to-Peer Payments
+### 5.2 Internal Transfers & Peer-to-Peer Payments
 
 MonCore operates a native internal transfer and peer-to-peer engine supporting:
 
@@ -857,7 +857,7 @@ This establishes MonCore as the **system of record for internal settlement** acr
 
 ---
 
-## 5.3 Multi-Wallet & Multi-Currency Spending
+### 5.3 Multi-Wallet & Multi-Currency Spending
 
 MonCore operates a built-in **multi-wallet spending orchestrator**.
 
@@ -880,7 +880,7 @@ Products never implement wallet routing or currency selection logic.
 
 ---
 
-## 5.4 Transaction Risk Controls & Limits
+### 5.4 Transaction Risk Controls & Limits
 
 Every outgoing payment and transfer is governed by a built-in transaction risk engine providing:
 
@@ -896,7 +896,7 @@ No deployed product can bypass regulatory transaction limits or risk enforcement
 
 ---
 
-## 5.5 Requests & Deferred Payments
+### 5.5 Requests & Deferred Payments
 
 MonCore provides a built-in **request-to-pay and deferred payment runtime** supporting:
 
@@ -913,7 +913,7 @@ Requests are treated as first-class regulated payment objects.
 
 ---
 
-## 5.6 QR & Universal Payment Support
+### 5.6 QR & Universal Payment Support
 
 MonCore embeds a universal **QR Payment Runtime** supporting:
 
@@ -938,7 +938,7 @@ This enables MonCore to function as a **universal QR payment kernel** across sch
 
 ---
 
-## 5.7 Funding, Top-Ups & Voucher Processing
+### 5.7 Funding, Top-Ups & Voucher Processing
 
 MonCore operates a built-in funding and top-up runtime supporting:
 
@@ -959,7 +959,7 @@ No product manages funding or top-up logic independently.
 
 ---
 
-## 5.8 Execution Safety & Idempotency
+### 5.8 Execution Safety & Idempotency
 
 All payment and funding operations are protected by built-in execution safety mechanisms providing:
 
@@ -979,7 +979,7 @@ Execution safety is enforced at operating system level.
 
 ---
 
-## 5.9 Audit, Statements & Regulatory Traceability
+### 5.9 Audit, Statements & Regulatory Traceability
 
 Every payment and transfer produces:
 
@@ -1000,7 +1000,7 @@ This establishes MonCore as a **regulator-grade settlement and audit platform**.
 
 ---
 
-## 5.10 Product Inheritance Model
+### 5.10 Product Inheritance Model
 
 All products deployed on MonCore automatically inherit:
 
@@ -1028,7 +1028,7 @@ MonCore functions as the permanent **Payments & Settlement Operating Runtime**.
 
 ---
 
-## Summary
+### Summary
 
 The Payments Runtime establishes MonCore as:
 
@@ -1064,7 +1064,7 @@ No product integrates external FX engines or pricing logic.
 
 ---
 
-## 6.1 Core Capabilities
+### 6.1 Core Capabilities
 
 The FX Runtime provides:
 
@@ -1081,7 +1081,7 @@ This runtime establishes MonCore as the **pricing authority** for all deployed f
 
 ---
 
-## 6.2 Live FX Ingestion & Pricing Authority
+### 6.2 Live FX Ingestion & Pricing Authority
 
 MonCore operates a continuously running FX ingestion and pricing layer providing:
 
@@ -1096,7 +1096,7 @@ The FX rate store functions as the **single source of truth** for all pricing an
 
 ---
 
-## 6.3 Deterministic Conversion Engine
+### 6.3 Deterministic Conversion Engine
 
 All FX pricing and conversion is executed by a kernel-level conversion engine.
 
@@ -1124,7 +1124,7 @@ This guarantees regulator-verifiable pricing and deterministic replay.
 
 ---
 
-## 6.4 FX-Aware Settlement & Ledger Attribution
+### 6.4 FX-Aware Settlement & Ledger Attribution
 
 MonCore executes all cross-currency settlement through an FX-aware ledger and settlement engine.
 
@@ -1145,7 +1145,7 @@ This enables:
 
 ---
 
-## 6.5 Execution Safety & Pricing Integrity
+### 6.5 Execution Safety & Pricing Integrity
 
 MonCore enforces strict FX execution integrity providing:
 
@@ -1164,7 +1164,7 @@ Pricing integrity is enforced centrally by the operating system.
 
 ---
 
-## 6.6 FX Audit & Regulatory Traceability
+### 6.6 FX Audit & Regulatory Traceability
 
 MonCore maintains a dedicated FX audit and supervision layer.
 
@@ -1180,7 +1180,7 @@ This enables continuous regulatory supervision of pricing and conversion activit
 
 ---
 
-## 6.7 FX Exposure & Regulatory Reporting
+### 6.7 FX Exposure & Regulatory Reporting
 
 MonCore embeds FX-aware exposure computation directly in the reporting kernel.
 
@@ -1200,7 +1200,7 @@ This supports:
 
 ---
 
-## 6.8 FX Spread & Revenue Attribution
+### 6.8 FX Spread & Revenue Attribution
 
 MonCore embeds a native **FX Revenue Attribution Engine**.
 
@@ -1215,7 +1215,7 @@ FX revenue is recorded at execution time and remains fully auditable.
 
 ---
 
-## 6.9 Product Inheritance Model
+### 6.9 Product Inheritance Model
 
 All products deployed on MonCore automatically inherit:
 
@@ -1240,7 +1240,7 @@ MonCore functions as the permanent **Multi-Currency Pricing & Conversion Operati
 
 ---
 
-## Summary
+### Summary
 
 The FX Runtime establishes MonCore as:
 
@@ -1272,7 +1272,7 @@ All funding execution, risk screening, settlement, reversals and safeguarding at
 
 ---
 
-## 7.1 Core Capabilities
+### 7.1 Core Capabilities
 
 The Funding & Top-Up Runtime provides:
 
@@ -1292,7 +1292,7 @@ This runtime establishes MonCore as the **funding authority** for all deployed f
 
 ---
 
-## 7.2 Bank Funding (Open-Banking Runtime)
+### 7.2 Bank Funding (Open-Banking Runtime)
 
 All bank funding begins with a governed **user consent flow**.
 
@@ -1310,7 +1310,7 @@ Settlement is applied only after provider confirmation and supervisory validatio
 
 ---
 
-## 7.3 Card Funding & Card Top-Ups Runtime
+### 7.3 Card Funding & Card Top-Ups Runtime
 
 MonCore embeds a native **Card Funding & Card Top-Ups Runtime** governing all card-based wallet funding, capture, reversals and dispute lifecycles.
 
@@ -1359,7 +1359,7 @@ MonCore functions as the permanent **Card Funding & Dispute Operating Runtime**.
 
 ---
 
-## 7.4 Voucher & Alternative Funding Runtime
+### 7.4 Voucher & Alternative Funding Runtime
 
 MonCore embeds a native **Voucher & Alternative Funding Runtime** governing cash-equivalent and prepaid funding instruments.
 
@@ -1390,7 +1390,7 @@ MonCore functions as the permanent **Cash & Voucher Funding Operating Runtime**.
 
 ---
 
-## 7.5 Risk Screening & Eligibility Controls
+### 7.5 Risk Screening & Eligibility Controls
 
 Before any external funding operation is initiated, MonCore executes built-in risk screening providing:
 
@@ -1409,7 +1409,7 @@ All risk screening is enforced centrally by the operating system.
 
 ---
 
-## 7.6 Secure Provider Orchestration
+### 7.6 Secure Provider Orchestration
 
 MonCore handles all provider communication internally.
 
@@ -1431,7 +1431,7 @@ Products never handle:
 
 ---
 
-## 7.7 Settlement Supervision & Verification
+### 7.7 Settlement Supervision & Verification
 
 All provider settlement notifications are processed through a governed settlement supervision layer.
 
@@ -1453,7 +1453,7 @@ Unsigned or malformed settlements are rejected at kernel level.
 
 ---
 
-## 7.8 Atomic Ledger Credit & Idempotency
+### 7.8 Atomic Ledger Credit & Idempotency
 
 When settlement is confirmed, MonCore executes regulated ledger crediting providing:
 
@@ -1469,7 +1469,7 @@ Duplicate or replayed settlements are automatically ignored.
 
 ---
 
-## 7.9 FX Normalization & Exposure Attribution
+### 7.9 FX Normalization & Exposure Attribution
 
 Before funds become available, MonCore performs:
 
@@ -1486,7 +1486,7 @@ This ensures:
 
 ---
 
-## 7.10 Real-Time Balance Propagation
+### 7.10 Real-Time Balance Propagation
 
 After successful settlement, MonCore emits:
 
@@ -1504,7 +1504,7 @@ Without polling or manual reconciliation.
 
 ---
 
-## 7.11 Chargebacks & Reversal Handling
+### 7.11 Chargebacks & Reversal Handling
 
 MonCore embeds native **Funding Reversal & Chargeback Handling**.
 
@@ -1524,7 +1524,7 @@ This guarantees:
 
 ---
 
-## 7.12 Audit & Regulatory Traceability
+### 7.12 Audit & Regulatory Traceability
 
 Every stage of the funding lifecycle is captured by the audit and supervision layer, including:
 
@@ -1543,7 +1543,7 @@ This enables:
 
 ---
 
-## 7.13 Product Inheritance Model
+### 7.13 Product Inheritance Model
 
 All products deployed on MonCore automatically inherit:
 
@@ -1572,7 +1572,7 @@ MonCore functions as the permanent **Funding & Top-Up Operating Runtime**.
 
 ---
 
-## Summary
+### Summary
 
 The Funding & Top-Up Runtime establishes MonCore as:
 
