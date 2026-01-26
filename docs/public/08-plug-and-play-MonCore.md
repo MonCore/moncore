@@ -28,7 +28,7 @@ From day one, MonCore already provides the regulated operating environment in wh
 
 ---
 
-## 2. MonCore as a Financial Operating System
+## 1.1 MonCore as a Financial Operating System
 
 MonCore is not a backend service and not a product framework.
 
@@ -69,7 +69,7 @@ The financial operating system supplies:
 
 ---
 
-## 3. What “Plug” and “Play” Mean in Practice
+## 1.2 What “Plug” and “Play” Mean in Practice
 
 On MonCore, plug-and-play has a precise operational meaning.
 
@@ -111,7 +111,7 @@ No duplicated compliance exists.
 
 ---
 
-## 4. What MonCore Provides From Day One
+## 1.3 What MonCore Provides From Day One
 
 MonCore is delivered as a fully operational regulated runtime environment.
 
@@ -137,7 +137,7 @@ This enables products to reach regulated production readiness in weeks rather th
 
 ---
 
-## 5. What Plug-and-Play Eliminates
+## 1.4 What Plug-and-Play Eliminates
 
 By deploying on MonCore, product teams do not need to:
 
@@ -154,7 +154,7 @@ All regulated runtime domains are already provided and governed by the operating
 
 ---
 
-## 6. Positioning
+## 1.5 Positioning
 
 MonCore defines a new category:
 
