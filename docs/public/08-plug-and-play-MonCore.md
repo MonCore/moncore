@@ -1586,3 +1586,375 @@ The Funding & Top-Up Runtime establishes MonCore as:
 Funding is not a service.
 
 It is a **core operating system capability**.
+
+## 8. Cards, Issuing & Scheme Capabilities (Contract-Gated)
+
+MonCore embeds a permanent **Issuer-Ready Cards & Scheme Execution Runtime** inside the Financial Operating System.
+
+This runtime provides a complete card issuing, authorisation, clearing, settlement and dispute execution layer that remains **contract-gated and inactive** until a licensed issuer sponsor and safeguarding institution are appointed.
+
+MonCore does not issue cards, participate in schemes, or perform regulated execution.
+
+All scheme participation, custody, issuing and settlement activities are performed exclusively by licensed issuer and safeguarding partners.
+
+MonCore operates as the ledger authority, supervisory control plane and execution orchestrator, while regulated execution remains under sponsor control.
+
+---
+
+### 8.1 Issuer-Agnostic & Contract-Gated Model
+
+MonCore is architected to operate in an issuer-agnostic, non-custodial mode prior to sponsor onboarding.
+
+In this model:
+
+- All issuer and scheme execution paths are pre-built  
+- All connectors and lifecycles are present  
+- All execution endpoints remain contract-gated and inactive  
+- No real funds, cards or scheme transactions are processed  
+
+This enables:
+
+- Technical readiness before sponsor onboarding  
+- Zero-risk due diligence and audits  
+- Zero-migration activation when a sponsor is appointed  
+
+Issuer onboarding activates execution by configuration — not by rebuilding architecture.
+
+---
+
+### 8.2 Card Issuing & Lifecycle Capabilities
+
+When an issuer sponsor is onboarded and execution is activated, MonCore provides full lifecycle support for:
+
+- Virtual card issuance (initial phase)
+- Wallet and card binding  
+- Tokenisation and digital wallet provisioning  
+- Card activation, suspension and termination  
+- Per-tenant and per-product card configuration  
+
+Products deployed on MonCore do not integrate issuing systems or scheme interfaces directly.
+
+All card lifecycle execution is inherited from the operating system.
+
+---
+
+### 8.3 Scheme Authorisation, Capture & Settlement
+
+MonCore provides a complete scheme-grade transaction execution model supporting:
+
+- Real-time authorisation handling  
+- Capture and reversal supervision  
+- Clearing and settlement staging  
+- FX-aware settlement attribution  
+- Ledger-authoritative debit execution  
+
+Ledger movements are executed only on confirmed settlement and remain:
+
+- Idempotent  
+- Replay-safe  
+- Fully auditable  
+
+This establishes MonCore as the **system of record and supervisory authority** for all card transactions, while regulated execution remains under issuer control.
+
+---
+
+### 8.4 Chargebacks, Disputes & Reversals
+
+MonCore embeds native dispute and chargeback lifecycles providing:
+
+- Dispute intake and classification  
+- Provisional holds and balance protection  
+- Reversal and re-credit handling  
+- Loss finalisation workflows  
+- Full supervisory and audit capture  
+
+Products do not build dispute engines, reversal logic or reconciliation pipelines.
+
+All dispute handling is inherited from the operating system.
+
+---
+
+### 8.5 Settlement, Reconciliation & Safeguarding Alignment
+
+MonCore provides built-in settlement supervision and reconciliation controls aligned with EMI and scheme requirements, including:
+
+- Daily settlement and clearing supervision  
+- Custody vs ledger balance alignment  
+- Per-currency safeguarding exposure tracking  
+- Regulator-grade reconciliation reports  
+- Supervisory audit trails  
+
+This enables direct alignment between:
+
+- Issuer safeguarding accounts  
+- Internal ledger authority  
+- Regulatory and scheme reporting  
+
+---
+
+### 8.6 Zero-Migration Issuer Activation Guarantee
+
+Issuer onboarding on MonCore requires:
+
+- No ledger reset  
+- No balance migration  
+- No transaction rewriting  
+- No historical data modification  
+
+Activation consists solely of:
+
+- Provisioning issuer credentials  
+- Enabling execution routing  
+- Binding issuer identifiers to existing ledger records  
+
+All historical data remains:
+
+- Cryptographically intact  
+- Regulator-verifiable  
+- Scheme-auditable  
+
+This enables rapid, compliant sponsor onboarding without platform disruption.
+
+---
+
+### 8.7 Product Inheritance Model
+
+All products deployed on MonCore automatically inherit:
+
+- Card issuing readiness  
+- Scheme transaction execution  
+- Authorisation and capture supervision  
+- Clearing and settlement staging  
+- Chargeback and dispute lifecycles  
+- Settlement reconciliation  
+- Regulatory audit trails  
+
+Products do not:
+
+- Integrate card processors  
+- Implement scheme interfaces  
+- Build dispute engines  
+- Design settlement pipelines  
+- Operate regulated execution infrastructure  
+
+MonCore functions as the permanent **Issuer-Ready Cards & Scheme Operating Runtime**.
+
+---
+
+## Summary
+
+The Cards & Issuing Runtime establishes MonCore as:
+
+- Issuer-agnostic card execution platform  
+- Zero-migration sponsor onboarding backend  
+- System of record for card transaction settlement  
+- Supervisory control plane for scheme activity  
+- Regulator-grade reconciliation and audit authority  
+
+Card issuing is not embedded into products.
+
+It is a **contract-gated operating system capability**.
+
+
+
+## 9. Compliance, AML & Supervisory Controls
+
+MonCore embeds a built-in **Compliance, AML & Supervisory Control Runtime** inside the Financial Operating System.
+
+This runtime provides prevention, monitoring, supervision and audit infrastructure for all deployed products, while all regulated custody, safeguarding, scheme participation and regulatory reporting remain under the exclusive authority of the appointed issuer and safeguarding institution.
+
+MonCore operates strictly as:
+
+- Technology platform and operating system  
+- Ledger authority and control plane  
+- Compliance prevention and supervisory layer  
+
+MonCore is not:
+
+- An issuer  
+- A safeguarding institution  
+- A custodian  
+- A regulator or final enforcement authority  
+
+All final regulatory authority and reporting obligations remain with licensed issuers, safeguarding institutions and regulators.
+
+---
+
+### 9.1 Embedded Compliance & Supervisory Capabilities (Platform Summary)
+
+MonCore embeds a permanent compliance and supervisory runtime covering:
+
+- Platform-wide transaction monitoring and risk signals  
+- Velocity and rolling-limit enforcement  
+- Tier-based entitlement and regulatory gating  
+- AML case tracking and analyst decision support  
+- Account state enforcement (restricted, frozen, closed)  
+- Identity recheck and remediation controls  
+- Chargeback and dispute supervision support  
+- Settlement and exposure supervision  
+- Unified compliance event and audit timelines  
+- Regulator-grade forensic exports (CSV / PDF)
+
+These controls operate:
+
+- Inside the execution kernel  
+- Before ledger mutation  
+- Before settlement finalisation  
+- Across all tenants and products  
+
+All compliance events, supervisory actions and enforcement decisions are:
+
+- Centrally validated  
+- Fully audit-logged  
+- Cryptographically traceable  
+- Regulator-exportable  
+
+MonCore provides **prevention, supervision and audit infrastructure**.  
+Final regulatory decisions, safeguarding execution and reporting remain under issuer and regulator authority.
+
+---
+
+### 9.2 Regulatory Positioning & Authority Boundaries
+
+MonCore enforces strict regulatory separation:
+
+- Issuers and safeguarding institutions retain full custody and reporting authority  
+- Scheme participation, settlement and regulatory reporting are executed exclusively by licensed partners  
+- MonCore cannot override issuer or regulator decisions  
+- MonCore cannot perform regulated custody, safeguarding or scheme execution  
+
+MonCore functions as:
+
+- Compliance prevention and monitoring layer  
+- Supervisory control and audit system of record  
+- Regulator-aligned operating environment  
+
+This model enables sponsor-safe, regulator-aligned deployment without transferring regulatory responsibility to the platform.
+
+---
+
+### 9.3 AML & Compliance Monitoring
+
+Tenants inherit built-in AML and monitoring surfaces including:
+
+- AML event timelines (tenant-scoped)  
+- Case and signal visibility  
+- Risk and severity classification  
+- User-linked AML history  
+- Compliance event timelines across all categories  
+
+Tenants can filter and review:
+
+- AML signals by type and date  
+- User-level AML histories  
+- Compliance events by category and severity  
+
+All monitoring data is:
+
+- Read-only  
+- Tenant-scoped  
+- Regulator-exportable  
+
+---
+
+### 9.4 Transaction & Ledger Compliance Views
+
+Tenants are provided with full compliance-grade transaction supervision, including:
+
+- Tenant-scoped transaction registry  
+- Advanced filtering (user, account, type, currency, status, flags)  
+- AML and compliance hold indicators  
+- Transaction lifecycle timelines  
+- Card transaction and authorisation history  
+- Transfer and internal movement visibility  
+
+Tenants also receive:
+
+- System ledger read access (tenant-scoped)  
+- Per-currency exposure and balances  
+- 24h net flow, card volume and FX volume indicators  
+- Financial position snapshots (JSON / CSV / PDF)  
+
+This enables real-time supervision of financial exposure and transactional risk.
+
+---
+
+### 9.5 Supervised Enforcement & Action Requests
+
+Tenants may initiate supervised compliance actions through governed workflows, including:
+
+- Request account freeze  
+- Request account unfreeze  
+- Request account closure  
+- Request identity recheck  
+
+Execution model:
+
+- Tenants cannot directly execute irreversible enforcement  
+- All actions are recorded as supervised requests  
+- Final execution is centrally validated and audit-logged  
+- Full status tracking (pending / approved / rejected) is available  
+
+This guarantees segregation between product operations and regulatory enforcement.
+
+---
+
+### 9.6 Audit Evidence & Regulator-Grade Exports
+
+Tenants are provided with regulator-grade forensic exports covering:
+
+- Compliance event timelines (CSV / PDF)  
+- AML events and investigations  
+- Account state snapshots and timelines  
+- Transaction registries and lifecycles  
+- Card activity and settlements (sanitised)  
+- Ledger extracts and financial position reports  
+- User forensic snapshots (single user or bulk)  
+
+All exports include:
+
+- Document identifiers  
+- Generation timestamps  
+- Tenant scoping  
+- Cryptographic integrity hashes  
+- Audit metadata  
+
+Exports are suitable for:
+
+- Internal compliance review  
+- Issuer supervision  
+- External audit  
+- Regulatory inspection  
+
+---
+
+### 9.7 Tenant Isolation & Access Governance
+
+All compliance and supervisory surfaces are strictly tenant-isolated and role-governed.
+
+Tenants receive:
+
+- Tenant-scoped visibility only (users, accounts, transactions, exports)  
+- Role-based partner access (owner, compliance, operations)  
+- Read-only enforcement boundaries for regulated actions  
+
+Cross-tenant access is technically impossible.  
+All access and data retrieval is authenticated, authorised and audit-logged.
+
+This guarantees strict operational separation between tenants and regulator-grade data governance.
+
+---
+
+### Summary
+
+By deploying on MonCore, a tenant inherits:
+
+- Built-in compliance dashboards and monitoring  
+- AML supervision and investigation tooling  
+- Account and identity enforcement workflows  
+- Transaction and ledger compliance views  
+- Supervised action request capabilities  
+- Regulator-grade audit and forensic exports  
+
+Compliance is not integrated later.  
+It is part of the operating environment every product runs on.
