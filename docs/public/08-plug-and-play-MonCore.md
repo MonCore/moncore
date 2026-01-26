@@ -1741,7 +1741,7 @@ MonCore functions as the permanent **Issuer-Ready Cards & Scheme Operating Runti
 
 ---
 
-## Summary
+### Summary
 
 The Cards & Issuing Runtime establishes MonCore as:
 
