@@ -2671,7 +2671,7 @@ Operational and regulatory readiness is present from the first deployment.
 
 ---
 
-### 12.6 Summary
+### Summary
 
 MonCore enables regulated financial products to be launched:
 
