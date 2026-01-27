@@ -2273,3 +2273,411 @@ All data access is:
 No additional supervisory, compliance or audit infrastructure is required by the tenant.
 
 MonCore provides a complete **plug-and-play control plane** enabling tenants to launch regulated financial products with immediate operational visibility, compliance supervision and audit readiness.
+
+---
+
+## 11. Product Types Powered by MonCore
+
+MonCore is designed as a general-purpose **Financial Operating System** capable of running a wide range of regulated financial products as tenant workloads.
+
+Products are not limited to a single business model or vertical.  
+Any product requiring regulated accounts, wallets, payments, cards, FX, funding, compliance and audit supervision can be deployed on the same operating system.
+
+All product types listed below inherit the full regulated runtime environment described in Sections 2–10, including:
+
+- Identity and security runtime  
+- Account and wallet lifecycle  
+- Payments, FX and funding execution  
+- Compliance, AML and supervisory controls  
+- Immutable audit and regulator-grade reporting  
+- Partner and tenant supervisory dashboards  
+
+---
+
+### Execution Readiness & Provider-Connected Sandbox
+
+All product types deployed on MonCore operate inside a **production-equivalent sandbox environment** from the first day of development.
+
+MonCore does not rely on mock services, simulated providers or placeholder execution paths.
+
+From initial integration, products execute against:
+
+- Live identity and verification pipelines (platform-managed, contract-gated)  
+- Live open-banking and funding orchestration (platform-managed, contract-gated)  
+- Live card funding and capture flows (platform-managed, contract-gated)  
+- Real webhook verification, idempotency and settlement supervision  
+- The same ledger, compliance and audit execution paths used in production  
+
+The sandbox environment is architected with:
+
+- Identical code and execution logic as production  
+- Identical compliance, AML and audit enforcement  
+- Identical event, reconciliation and export pipelines  
+- Only environment-scoped routing, limits and settlement configuration differing between sandbox and production (all credentials remain platform-owned in all environments) 
+
+All external provider connectivity is:
+
+- Managed exclusively by the MonCore operating system  
+- Fully abstracted from tenant products and integrations  
+- Activated only through contract and capability gating  
+- Executed using platform-owned credentials and signing material  
+- Never exposed, delegated or disclosed at credential or provider level to tenants  
+
+Sandbox execution operates in an isolated, non-production environment using environment-scoped settlement routing and platform-managed test credentials.  
+No production funds, live customer balances or custodial accounts are affected during sandbox operation.
+
+After technical validation, compliance readiness and contractual activation, products are promoted to the production environment by enabling production routing and settlement configuration inside the MonCore operating system, without any code, integration or architecture changes by the tenant.
+
+This enables:
+
+- End-to-end product testing with real regulated flows  
+- No migration from mocks to production implementations  
+- No replacement of compliance, funding or execution logic before launch  
+- Deterministic sandbox-to-production promotion  
+
+All products listed below inherit this execution model by default.
+
+---
+
+### 11.1 Consumer & Retail Financial Products
+
+Products targeting individual consumers and retail users, including:
+
+- Neobanks and challenger banks  
+- Consumer multi-currency wallets  
+- Stored-value and regulated balance products  
+- Personal spending and budgeting applications  
+- Youth and family financial products  
+- Travel and expatriate wallets  
+
+Inherited capabilities include:
+
+- Regulated personal accounts and wallets  
+- Multi-currency balances and FX  
+- Peer-to-peer transfers and QR payments  
+- Card issuing and spending (when issuer activated)  
+- Consumer AML and transaction monitoring  
+- Full audit, statements and supervisory dashboards  
+
+---
+
+### 11.2 Business & SME Financial Products
+
+Products serving small and medium enterprises, freelancers and professionals, including:
+
+- Business wallets and SME neobanks  
+- Freelancer and contractor payment platforms  
+- Expense management and payout tools  
+- Merchant settlement wallets  
+
+Inherited capabilities include:
+
+- Business and corporate account models  
+- KYB and UBO onboarding and supervision  
+- Multi-currency business wallets  
+- Inbound funding and outbound payouts  
+- Tier-based limits and entitlement enforcement  
+- Compliance, AML and audit supervision  
+
+---
+
+### 11.3 Corporate & Treasury Products
+
+Products designed for larger corporates, platforms and treasury operations, including:
+
+- Corporate treasury wallets  
+- Multi-entity balance management  
+- Internal treasury transfer platforms  
+- Liquidity and exposure management tools  
+
+Inherited capabilities include:
+
+- Multi-wallet and multi-currency containers  
+- High-volume payment execution  
+- FX exposure normalization and reporting  
+- Settlement supervision and reconciliation  
+- Regulator-grade audit and financial reporting  
+
+---
+
+### 11.4 Embedded Finance & Platform Products
+
+Financial capabilities embedded inside non-financial platforms, including:
+
+- Marketplaces embedding wallets and payouts  
+- SaaS platforms offering financial accounts  
+- Ride-hailing, gig and creator platforms  
+- E-commerce and platform-native wallets  
+
+Inherited capabilities include:
+
+- Tenant-scoped account and wallet provisioning  
+- In-platform funding and payout orchestration  
+- Split payments and internal ledger settlement  
+- Embedded compliance and AML enforcement  
+- Full supervisory dashboards for platform operators  
+
+---
+
+### 11.5 Marketplaces & Pay-In / Pay-Out Products
+
+Products operating multi-party payment and settlement flows, including:
+
+- Two-sided marketplaces  
+- Seller payout and escrow platforms  
+- Aggregators and payment facilitators  
+- Affiliate and commission settlement systems  
+- Mass payout and disbursement platforms  
+
+Inherited capabilities include:
+
+- Multi-party ledger settlement  
+- Pending and escrow balance management  
+- Automated pay-in and pay-out routing  
+- AML screening across all parties  
+- Full settlement and reconciliation supervision  
+
+---
+
+### 11.6 Remittance & Cross-Border Products
+
+Products focused on international money movement, including:
+
+- Consumer remittance applications  
+- Cross-border business payment platforms  
+- International payroll and contractor payouts  
+- Corridor-based money transfer services  
+
+Inherited capabilities include:
+
+- Multi-currency wallets and FX execution  
+- Cross-currency transfers and normalization  
+- Corridor-aware AML and transaction screening  
+- Settlement and safeguarding exposure reporting  
+- Regulator-grade cross-border audit trails  
+
+---
+
+### 11.7 Card-Centric Products
+
+Products primarily built around card issuance and card spending, including:
+
+- Virtual card wallets  
+- Consumer and business card programmes  
+- Corporate expense and benefits platforms  
+- Prepaid and controlled-spend cards  
+
+Inherited capabilities include:
+
+- Card issuing readiness (contract-gated)  
+- Scheme authorisation and settlement supervision  
+- Card funding and top-up support  
+- Dispute, chargeback and reversal lifecycles  
+- Full card transaction audit and reporting  
+
+---
+
+### 11.8 FX & Multi-Currency Products
+
+Products specialised in currency management and FX services, including:
+
+- Multi-currency wallets and accounts  
+- FX wallets and trading-adjacent products  
+- International spending and travel wallets  
+- FX margin and spread-based products  
+
+Inherited capabilities include:
+
+- Live FX pricing and deterministic conversion  
+- Multi-wallet currency management  
+- FX exposure normalization and reporting  
+- Spread and revenue attribution  
+- Regulator-grade FX audit and supervision  
+
+---
+
+### 11.9 Regulated Infrastructure Products (Advanced)
+
+Advanced infrastructure-level products deployed on top of MonCore, including:
+
+- Banking-as-a-Service platforms  
+- Embedded finance infrastructure providers  
+- White-label neobank platforms  
+- Regulated wallet and payment backends for third parties  
+
+Inherited capabilities include:
+
+- Full multi-tenant operating model  
+- Ledger authority and settlement supervision  
+- Tenant-scoped compliance and dashboards  
+- Issuer-ready execution and safeguarding alignment  
+- Regulator-grade audit and control plane  
+
+---
+
+### Summary
+
+MonCore is not limited to a single product category.
+
+It is a general-purpose **Financial Operating System** capable of powering:
+
+- Consumer and business neobanks  
+- Wallets and payment platforms  
+- Marketplaces and embedded finance  
+- Remittance and cross-border services  
+- Card issuing and expense platforms  
+- FX and multi-currency products  
+- Regulated financial infrastructure  
+
+All products are deployed onto the same regulated operating environment and inherit:
+
+- Execution runtimes  
+- Compliance and supervisory controls  
+- Immutable audit and reconciliation  
+- Partner and tenant dashboards  
+
+Product teams deploy products, not regulated backends.  
+MonCore provides the operating system that runs them.
+
+---
+
+## 12. Deployment Speed & Time-to-Market
+
+One of the primary design objectives of MonCore is to reduce the time required to launch regulated financial products from years to weeks, without compromising regulatory integrity, supervisory controls or audit readiness.
+
+Traditional fintech product launches require sequential integration of identity providers, payment processors, funding rails, compliance systems, card schemes, reconciliation pipelines and audit tooling.
+
+MonCore eliminates this integration phase by providing a continuously running regulated operating environment into which products are deployed directly.
+
+Products do not assemble regulated backends.  
+They are deployed onto an already-operational Financial Operating System.
+
+---
+
+### 12.1 Traditional Regulated Product Timelines
+
+In a conventional regulated build, product teams must typically:
+
+- Integrate identity and verification providers  
+- Build authentication and session infrastructure  
+- Implement wallet and ledger engines  
+- Integrate funding rails and payment processors  
+- Assemble AML and transaction monitoring systems  
+- Design reconciliation and settlement pipelines  
+- Build audit logging and export tooling  
+- Pass multiple sandbox migrations before production  
+
+Typical timelines:
+
+- Architecture and vendor selection: 2–4 months  
+- Provider integrations and testing: 4–8 months  
+- Compliance tooling and supervision: 3–6 months  
+- Sandbox stabilisation and migrations: 2–4 months  
+
+Total time to regulated production: **12–24 months**
+
+---
+
+### 12.2 MonCore Deployment Model
+
+On MonCore, all regulated runtime domains described in Sections 2–10 are already permanently active.
+
+From first integration, products inherit:
+
+- Identity, authentication and session infrastructure  
+- Regulated account and wallet runtime  
+- Payments, FX and funding execution engines  
+- Compliance, AML and supervisory controls  
+- Audit, reconciliation and regulator-grade reporting  
+- Partner and tenant supervisory dashboards  
+
+Product teams only provide:
+
+- User experience and frontend  
+- Product configuration and workflows  
+- Business logic and branding  
+
+No regulated backend is built.  
+No provider integrations are assembled.  
+No compliance infrastructure is implemented.
+
+---
+
+### 12.3 Sandbox-to-Production Promotion Model
+
+All products are developed inside a production-equivalent, provider-connected sandbox environment operated entirely by the MonCore operating system.
+
+As described in Section 11:
+
+- Execution paths are identical between sandbox and production  
+- Compliance, AML and audit enforcement is identical  
+- Ledger, reconciliation and export pipelines are identical  
+- External providers are orchestrated by the MonCore operating system  
+
+Promotion to production consists solely of:
+
+- Contractual activation of regulated capabilities  
+- Enabling production settlement routing and credentials  
+- Binding issuer and safeguarding configuration  
+
+No code changes are required.  
+No migrations are required.  
+No provider reintegration is required. 
+Tenants never receive, manage or rotate provider credentials at any stage of the deployment lifecycle.
+
+This enables deterministic and low-risk sandbox-to-production promotion.
+
+---
+
+### 12.4 Typical Product Launch Timelines on MonCore
+
+Because all regulated runtime domains are pre-built and permanently active, typical timelines on MonCore are:
+
+- Initial tenant provisioning: days  
+- Product integration and frontend build: 2–6 weeks  
+- End-to-end regulated testing in sandbox: 2–4 weeks  
+- Compliance review and contractual activation: 2–6 weeks  
+
+Typical time to regulated production readiness: **6–12 weeks**
+
+This includes:
+
+- Identity and onboarding flows  
+- Funding and payment execution  
+- Card readiness (when issuer activated)  
+- AML supervision and audit readiness  
+- Full operational dashboards  
+
+---
+
+### 12.5 Operational Readiness From Day One
+
+From the first transaction, every product deployed on MonCore operates with:
+
+- Regulator-grade ledger authority  
+- Embedded compliance and AML supervision  
+- Supervisory dashboards and forensic tooling  
+- Immutable audit trails and export readiness  
+- Reconciliation and safeguarding alignment  
+
+Products do not pass through:
+
+- Mock environments  
+- Partial compliance phases  
+- Shadow ledgers  
+- Parallel backends  
+
+Operational and regulatory readiness is present from the first deployment.
+
+---
+
+### 12.6 Summary
+
+MonCore enables regulated financial products to be launched:
+
+- Without building regulated backend infrastructure  
+- Without integrating providers directly  
+- Without migrating from sandbox to production  
+- Without rewriting compliance or execution logic  
+
+By deploying onto a permanently running Financial Operating System, product teams can reach regulated production readiness in weeks rather than years, while maintaining full supervisory control, audit integrity and regulatory alignment from the first transaction.
