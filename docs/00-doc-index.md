@@ -32,6 +32,8 @@ The following documents are publicly available for open distribution:
 - **Issuer Readiness & Transition Architecture**             
   [`07-issuer-readiness-and-transition.md`](./public/07-issuer-readiness-and-transition.md)
 
+- **Plug-and-Play on MonCore**                    
+  [`08-plug-and-play-moncore.md.`](./public/08-plug-and-play-moncore.md)
   
 These documents describe MonCore’s operating model, control boundaries, and regulatory positioning at a **non-confidential** level.
 
