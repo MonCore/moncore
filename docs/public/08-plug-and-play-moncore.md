@@ -1961,3 +1961,315 @@ By deploying on MonCore, a tenant inherits:
 
 Compliance is not integrated later.  
 It is part of the operating environment every product runs on.
+
+## 10. Partner & Tenant Dashboards — Operational, Compliance & Audit Access
+
+MonCore provides every tenant with an integrated **Partner (Tenant) Dashboard** designed for real-time operational supervision, compliance monitoring and regulator-grade audit access.
+
+Tenants do not build internal monitoring systems, ledgers, or compliance tooling.  
+They deploy into an environment where supervisory visibility, forensic access and export capabilities are already live by default.
+
+All dashboards and APIs are:
+
+- Tenant-scoped by design  
+- Read-only for financial and compliance data  
+- Regulator-safe and audit-ready  
+- Fully isolated between tenants  
+- Fully exportable (CSV / PDF)  
+
+---
+
+### 10.1 Tenant Scope & Access Model
+
+Each tenant accesses MonCore through a dedicated partner dashboard and tenant-scoped API layer.
+
+Core guarantees:
+
+- Tenant identity is derived exclusively from partner authentication tokens  
+- No tenant identifiers are accepted from request parameters  
+- Cross-tenant access is technically impossible  
+- All queries are enforced at database level  
+
+This guarantees strict data segregation and regulator-grade isolation.
+
+---
+
+### 10.2 Operational Overview Dashboard
+
+Each tenant receives a real-time operational dashboard providing:
+
+- Total users  
+- New users per day  
+- Open AML cases  
+- Frozen users  
+- Daily transaction count  
+- Daily transaction volume  
+
+The dashboard provides immediate supervisory visibility over platform activity and risk posture.
+
+From the overview panel tenants can directly access:
+
+- Open AML case lists  
+- Frozen account lists  
+- User-level compliance views  
+- **User directory and individual user supervision panels**  
+
+---
+
+### 10.3 Immutable System Ledger Access (Read-Only)
+
+Tenants receive full read-only access to their authoritative system ledger.
+
+Capabilities include:
+
+- Paginated immutable ledger entries  
+- Multi-currency ledger-native balances  
+- Real-time financial KPIs:
+  - Total ledger balance  
+  - Net flow (24h)  
+  - Pending amount  
+  - Platform exposure  
+  - Card volume  
+  - FX volume  
+  - Gross inflow / outflow  
+
+Additional features:
+
+- Per-currency breakdown (ledger-native, non-converted)  
+- Advanced filters (date, type, status, currency)  
+- Cursor-based pagination  
+- Row-level forensic drill-down  
+- **Card transaction activity and settlement supervision (sanitised, no PAN)**  
+
+Ledger data is immutable. Deletion and modification are prohibited.
+
+---
+
+### 10.4 Ledger Forensic Views & Single-Entry Exports
+
+For every ledger entry, tenants can open a dedicated forensic drawer providing:
+
+- Transaction identifiers  
+- Provider references  
+- FX details (rate, base, quote, applied flag)  
+- Balance impact (available / pending after)  
+- Status lifecycle  
+- Error diagnostics  
+- Creation timestamps  
+
+Each single ledger entry can be exported individually as:
+
+- CSV  
+- PDF  
+
+All exports include document metadata and are audit-logged.
+
+---
+
+### 10.5 Financial Position & Exposure Reporting
+
+Tenants receive a built-in financial position module providing:
+
+- Per-currency balances (ledger-native)  
+- Aggregated exposure metrics  
+- Pending vs available balances  
+- Platform exposure indicators  
+
+Exports available:
+
+- Full financial position — CSV  
+- Full financial position — PDF  
+
+No FX conversion is applied. All amounts remain ledger-native for audit accuracy.
+
+---
+
+### 10.6 Compliance Transaction Monitoring
+
+Tenants receive a full compliance transaction monitoring console sourced from immutable compliance views.
+
+Capabilities include:
+
+- Full transaction list (ledger-sourced)  
+- Advanced filtering:
+  - Transaction ID  
+  - User / account  
+  - Type and direction  
+  - Currency  
+  - Status  
+  - Date range  
+  - AML flags  
+  - Compliance holds  
+  - Amount ranges  
+
+Displayed attributes include:
+
+- Tenant & user identifiers  
+- Direction and amount  
+- Provider references  
+- Status lifecycle  
+- Creation timestamps  
+
+All data is tenant-scoped and immutable.
+
+---
+
+### 10.7 Transaction Lifecycle & Forensic Timelines
+
+For each transaction, tenants can open a full lifecycle timeline showing:
+
+- Creation  
+- Authorization  
+- Settlement  
+- Reversals  
+- Failures  
+- Actor attribution  
+- Timestamped state transitions  
+
+This provides regulator-grade traceability for every financial movement.
+
+---
+
+### 10.8 Compliance & AML Supervisory Views
+
+Tenants receive built-in compliance supervision tools including:
+
+- Open AML case lists  
+- Risk signal overlays  
+- Frozen account monitoring  
+- User-level compliance histories  
+- Identity event tracking (KYC / KYB)  
+- Account state transitions (freeze / unfreeze / holds)  
+- **User profile supervision and full activity histories**  
+
+All actions and states are fully auditable and tenant-isolated.
+
+---
+
+### 10.8.1 Supervisory Action Requests & Enforcement Workflow
+
+Tenants are provided with supervised enforcement request workflows, including:
+
+- Account freeze and unfreeze requests  
+- Account closure requests  
+- Identity recheck escalation requests  
+
+All enforcement actions are:
+
+- Submitted as supervised requests  
+- Centrally validated before execution  
+- Fully status-tracked (pending / approved / rejected)  
+- Audit-logged and regulator-visible  
+
+Tenants cannot directly execute irreversible enforcement actions.
+
+---
+
+### 10.9 Regulator-Grade Export Framework
+
+All tenant dashboards provide built-in forensic export capabilities.
+
+Supported exports include:
+
+- Full ledger export (CSV / PDF)  
+- Single ledger entry export (CSV / PDF)  
+- Financial position export (CSV / PDF)  
+- Compliance transactions export (CSV / PDF)  
+- Single transaction forensic export (CSV / PDF)  
+- Compliance timeline export (CSV / PDF)  
+
+All exports include:
+
+- Unique document identifiers  
+- Generation timestamps  
+- Tenant scope declaration  
+- Data scope description  
+- SHA-256 integrity hashes (where applicable)  
+- Automatic audit logging  
+
+JSON exports are explicitly forbidden for partner tenants.
+
+---
+
+### 10.10 Audit Logging & Supervisory Integrity
+
+Every tenant action performed through dashboards or exports is:
+
+- Logged in the central audit log  
+- Tagged with actor, tenant, scope and purpose  
+- Immutable and non-erasable  
+
+This guarantees:
+
+- Full traceability for regulators and auditors  
+- Export provenance  
+- Forensic reproducibility  
+
+---
+
+### 10.11 Plug-and-Play Deployment Model
+
+Tenants integrating with MonCore receive this entire supervisory and compliance stack automatically.
+
+No additional development is required for:
+
+- Ledger monitoring  
+- Compliance dashboards  
+- AML supervision  
+- Transaction lifecycle tracking  
+- Export tooling  
+- Audit logging  
+- User supervision tooling  
+- Enforcement workflows  
+
+This allows tenants to deploy regulated financial products with immediate operational and regulatory readiness.
+
+---
+
+### Summary — Tenant Supervisory Capabilities at a Glance
+
+By deploying on MonCore, a tenant automatically receives a complete **bank-grade operational, compliance and audit control environment**, including:
+
+**Operational Supervision**
+- Real-time organisation dashboard  
+- User growth and onboarding metrics  
+- Transaction volumes and platform activity  
+- Frozen account monitoring  
+- Full user directory and profile supervision  
+
+**Authoritative Ledger Access**
+- Full immutable system ledger (read-only)  
+- Multi-currency balances and exposures  
+- Real-time financial KPIs and per-currency breakdowns  
+- Row-level forensic drill-down  
+- Card activity and settlement supervision  
+
+**Forensic Transaction Monitoring**
+- Full transaction monitoring console  
+- Advanced filtering and classification  
+- Complete transaction lifecycle timelines  
+- Provider attribution and status traceability  
+
+**Compliance & AML Supervision**
+- Open AML case monitoring  
+- Risk signal and compliance overlays  
+- Account state supervision (freeze / holds / closures)  
+- Identity, verification and remediation event tracking  
+- Supervised enforcement request workflows  
+
+**Regulator-Grade Export & Audit Framework**
+- Full ledger, position and compliance exports (CSV / PDF)  
+- Single-record forensic exports  
+- Document identifiers, timestamps and integrity metadata  
+- Automatic audit logging and provenance tracking  
+
+All data access is:
+
+- Strictly tenant-scoped  
+- Read-only by design  
+- Technically isolated at database level  
+- Fully auditable and regulator-safe  
+
+No additional supervisory, compliance or audit infrastructure is required by the tenant.
+
+MonCore provides a complete **plug-and-play control plane** enabling tenants to launch regulated financial products with immediate operational visibility, compliance supervision and audit readiness.
